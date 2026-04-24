@@ -5,8 +5,7 @@
 ## 技术栈
 
 - **框架**：Next.js 16（App Router）、React 19、TypeScript
-- **样式**：Tailwind CSS 4、shadcn（Base UI）、`tw-animate-css`
-- **动效**：[Motion](https://motion.dev/)（`motion/react`）
+- **样式**：Tailwind CSS 4、shadcn（Base UI）、`tw-animate-css`（动效以 CSS 为主）
 - **校验 / 环境**：Zod、[@t3-oss/env-nextjs](https://env.t3.gg/)
 - **国际化**：`en` / `zh`，与主站类似的路由形态（`/[lang]/...`）与 [Proxy](https://nextjs.org/docs/messages/middleware-to-proxy) 重定向
 - **可选**：Drizzle ORM、Supabase 客户端（见下方「数据库」）
@@ -23,12 +22,12 @@ npm run dev
 
 常用命令：
 
-| 命令 | 说明 |
-|------|------|
-| `npm run dev` | 开发服务 |
-| `npm run build` | 生产构建 |
-| `npm run start` | 启动生产构建产物 |
-| `npm run lint` | ESLint |
+| 命令                                             | 说明                            |
+| ------------------------------------------------ | ------------------------------- |
+| `npm run dev`                                    | 开发服务                        |
+| `npm run build`                                  | 生产构建                        |
+| `npm run start`                                  | 启动生产构建产物                |
+| `npm run lint`                                   | ESLint                          |
 | `npm run db:generate` / `db:migrate` / `db:push` | Drizzle（仅在接入数据库后使用） |
 
 ## 环境变量
@@ -41,14 +40,14 @@ npm run dev
 
 ## 仓库结构（摘录）
 
-| 路径 | 说明 |
-|------|------|
-| `src/app/[lang]/` | 多语言根路由、营销首页、各工具页（`tools/[slug]`） |
-| `src/i18n/` | `locales`、双语文案（`dictionaries`）、服务端 `getLocaleDictionary` |
-| `src/lib/tools/` | 工具注册表 `registry`、分块 `panels`、各工具子目录与 Zod/交互 |
-| `src/components/shell/` | 营销区、工具壳、带 Motion 的列表等 |
-| `src/proxy.ts` | Next.js 16 的 Proxy（原 `middleware`）：无 `locale` 前缀时重定向到 `/{locale}/...` |
-| `public/` | 静态资源（如 `favicon.svg`） |
+| 路径                    | 说明                                                                               |
+| ----------------------- | ---------------------------------------------------------------------------------- |
+| `src/app/[lang]/`       | 多语言根路由、营销首页、各工具页（`tools/[slug]`）                                 |
+| `src/i18n/`             | `locales`、双语文案（`dictionaries`）、服务端 `getLocaleDictionary`                |
+| `src/lib/tools/`        | 工具注册表 `registry`、分块 `panels`、各工具子目录与 Zod/交互                      |
+| `src/components/shell/` | 营销区、工具壳、列表等                                                             |
+| `src/proxy.ts`          | Next.js 16 的 Proxy（原 `middleware`）：无 `locale` 前缀时重定向到 `/{locale}/...` |
+| `public/`               | 静态资源（如 `favicon.svg`）                                                       |
 
 ## 如何新增一个工具
 

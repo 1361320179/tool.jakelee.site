@@ -10,8 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  --font-heading: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia,
-    serif;
+  --font-heading:
+    "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -152,7 +152,11 @@
     background-image:
       radial-gradient(circle at top left, var(--hero-start), transparent 32rem),
       radial-gradient(circle at top right, var(--hero-end), transparent 30rem),
-      linear-gradient(to bottom, transparent, color-mix(in oklab, var(--background) 94%, black 6%));
+      linear-gradient(
+        to bottom,
+        transparent,
+        color-mix(in oklab, var(--background) 94%, black 6%)
+      );
     min-height: 100vh;
   }
   body::before {
@@ -230,9 +234,21 @@
     pointer-events: none;
     z-index: -2;
     background:
-      radial-gradient(ellipse 80% 50% at 20% 40%, color-mix(in oklab, var(--primary) 22%, transparent), transparent 55%),
-      radial-gradient(ellipse 70% 45% at 80% 20%, color-mix(in oklab, oklch(0.75 0.12 280) 18%, transparent), transparent 50%),
-      radial-gradient(ellipse 60% 50% at 50% 90%, color-mix(in oklab, oklch(0.78 0.1 85) 14%, transparent), transparent 45%);
+      radial-gradient(
+        ellipse 80% 50% at 20% 40%,
+        color-mix(in oklab, var(--primary) 22%, transparent),
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 70% 45% at 80% 20%,
+        color-mix(in oklab, oklch(0.75 0.12 280) 18%, transparent),
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse 60% 50% at 50% 90%,
+        color-mix(in oklab, oklch(0.78 0.1 85) 14%, transparent),
+        transparent 45%
+      );
     animation: tool-aurora-drift 22s ease-in-out infinite;
     opacity: 0.85;
   }
@@ -248,20 +264,5 @@
   }
   66% {
     transform: translate(-1.5%, 2%) scale(0.98);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 1ms !important;
-  }
-  .tool-aurora {
-    animation: none;
-    opacity: 0.5;
   }
 }
