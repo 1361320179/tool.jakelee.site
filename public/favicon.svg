@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="8" fill="oklch(0.22 0.025 240)"/>
+  <path
+    d="M8 12.5L16 8l8 4.5v7L16 24l-8-4.5v-7z"
+    stroke="oklch(0.72 0.09 188)"
+    stroke-width="1.6"
+    fill="oklch(0.32 0.04 220)"
+  />
+  <path
+    d="M16 12.5L22 15.5V19L16 22l-6-2.5v-3.5l6-3z"
+    fill="oklch(0.72 0.09 188 / 0.4)"
+  />
+</svg>
