@@ -8,7 +8,7 @@
 - **样式**：Tailwind CSS 4、shadcn（Base UI）、`tw-animate-css`
 - **动效**：[Motion](https://motion.dev/)（`motion/react`）
 - **校验 / 环境**：Zod、[@t3-oss/env-nextjs](https://env.t3.gg/)
-- **国际化**：`en` / `zh`，与主站类似的路由形态（`/[lang]/...`）与中间件重定向
+- **国际化**：`en` / `zh`，与主站类似的路由形态（`/[lang]/...`）与 [Proxy](https://nextjs.org/docs/messages/middleware-to-proxy) 重定向
 - **可选**：Drizzle ORM、Supabase 客户端（见下方「数据库」）
 - **分享图**：`@vercel/og`（`app/api/og`）
 
@@ -47,7 +47,7 @@ npm run dev
 | `src/i18n/` | `locales`、双语文案（`dictionaries`）、服务端 `getLocaleDictionary` |
 | `src/lib/tools/` | 工具注册表 `registry`、分块 `panels`、各工具子目录与 Zod/交互 |
 | `src/components/shell/` | 营销区、工具壳、带 Motion 的列表等 |
-| `src/middleware.ts` | 无 `locale` 前缀的访问重定向到 `/{locale}/...` |
+| `src/proxy.ts` | Next.js 16 的 Proxy（原 `middleware`）：无 `locale` 前缀时重定向到 `/{locale}/...` |
 | `public/` | 静态资源（如 `favicon.svg`） |
 
 ## 如何新增一个工具

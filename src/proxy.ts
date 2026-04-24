@@ -7,7 +7,7 @@ function pathnameHasLocale(pathname: string) {
   return isLocale(maybeLocale);
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (
