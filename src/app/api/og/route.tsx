@@ -4,10 +4,10 @@ import { siteConfig } from "@/config/site";
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const title =
-    searchParams.get("title")?.slice(0, 120) ?? "Jake Lee · Online tools";
+    searchParams.get("title")?.slice(0, 120) ?? "Jake Lee · Practical online tools";
   const subtitle =
     searchParams.get("subtitle")?.slice(0, 220) ??
-    "Practical browser-side utilities.";
+    "A tools subsite of jakelee.site — practical browser-based utilities.";
 
   return new ImageResponse(
     (

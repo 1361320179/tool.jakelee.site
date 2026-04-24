@@ -6,9 +6,9 @@ import type { ToolsSiteDictionary } from "@/i18n/types";
 const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
   en: {
     site: {
-      title: "Jake Lee · Online tools",
+      title: "Jake Lee · Practical online tools",
       description:
-        "Practical browser-side utilities aligned with jakelee.site — fast, private, and easy to maintain.",
+        "A tools subsite of jakelee.site — practical, browser-based utilities for everyday tasks. Everything runs locally in your browser; your content is never uploaded.",
       shortName: "Tools",
       mainSiteLink: "jakelee.site",
     },
@@ -22,9 +22,9 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
       rights: "All rights reserved.",
     },
     home: {
-      eyebrow: "Online tools",
+      eyebrow: "Practical online tools",
       heroBody:
-        "Aligned with the main site’s look and feel. Processing stays in your browser — content is not uploaded.",
+        "All tools run in your browser — nothing is uploaded, so your data stays on your device.",
       allTools: "All tools",
     },
     toolPage: {
@@ -91,13 +91,13 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
     metadata: {
       titleTemplate: "%s · Tools | Jake Lee",
       defaultDescription:
-        "Practical browser-side utilities — aligned with jakelee.site.",
+        "A tools subsite of jakelee.site — practical browser-based utilities.",
     },
   },
   zh: {
     site: {
       title: "Jake Lee · 在线小工具",
-      description: "与 jakelee.site 同品牌的实用在线小工具集合。",
+      description: "jakelee.site 子网站（实用在线小工具）",
       shortName: "工具",
       mainSiteLink: "jakelee.site",
     },
@@ -113,7 +113,7 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
     home: {
       eyebrow: "在线小工具",
       heroBody:
-        "全站与主站设计一致，在浏览器本地完成处理，不额外上传你的内容。",
+        "所有工具都在浏览器本地完成处理，不上传您的任何内容，保障您的隐私安全。",
       allTools: "全部工具",
     },
     toolPage: {
@@ -178,11 +178,13 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
     },
     metadata: {
       titleTemplate: "%s · 工具 | Jake Lee",
-      defaultDescription: "与 jakelee.site 同品牌的实用在线小工具集合。",
+      defaultDescription: "jakelee.site 子网站（实用在线小工具）",
     },
   },
 };
 
-export async function getDictionary(locale: SiteLocale): Promise<ToolsSiteDictionary> {
+export async function getDictionary(
+  locale: SiteLocale,
+): Promise<ToolsSiteDictionary> {
   return dictionaries[locale];
 }
