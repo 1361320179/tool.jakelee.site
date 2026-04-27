@@ -77,6 +77,13 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
         tags: ["JSON", "Dev"],
         ogSubtitle: "Local JSON prettify and minify.",
       },
+      "image-converter": {
+        name: "Image converter",
+        description:
+          "Convert PNG, JPG, WebP, GIF, and SVG in batches locally in your browser, including ZIP import and ZIP download.",
+        tags: ["Image", "Batch"],
+        ogSubtitle: "Local image format conversion with ZIP batch workflow.",
+      },
     },
     toolUi: {
       base64: {
@@ -124,6 +131,37 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
         copyHintFail: "Copy failed",
         errTooLong: "Input is too long (max 512KB).",
         errParse: "Invalid JSON. Check brackets, commas, and quotes.",
+      },
+      "image-converter": {
+        cardTitle: "Image converter",
+        dropzoneTitle: "Drop images or ZIP files here",
+        dropzoneBody:
+          "Supported formats: PNG, JPG, WebP, GIF, SVG. You can also upload a ZIP containing images.",
+        pickFiles: "Choose files",
+        labelFormat: "Target format",
+        labelQuality: "Quality",
+        labelScale: "Resolution scale",
+        summaryFiles: "Files",
+        summarySize: "Total size",
+        summaryDone: "Converted",
+        emptyQueue: "No files yet. Add images or a ZIP package to begin.",
+        statusPending: "Pending",
+        statusConverting: "Converting...",
+        statusDone: "Done",
+        convertAll: "Convert all",
+        downloadZip: "Download ZIP",
+        clear: "Clear list",
+        errInvalidZip: "Unable to read this ZIP file.",
+        errTooManyFiles: "Too many files. Maximum allowed: {max}.",
+        errTooLargeTotal: "Total size is too large. Limit: {max}.",
+        errConvertFailed: "Conversion failed for this file.",
+        errZipBuild: "Failed to build output ZIP.",
+        noticeNoSupportedFiles: "No supported image files were found.",
+        noticeZipNoImages: "ZIP file contains no supported images.",
+        disclaimerGif:
+          "Animated GIF inputs are converted from the first frame only. GIF output uses 256-color quantization.",
+        disclaimerSvg:
+          "Raster to SVG exports an embedded bitmap SVG wrapper, not vector tracing.",
       },
     },
     metadata: {
@@ -202,6 +240,13 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
         tags: ["JSON", "开发"],
         ogSubtitle: "本地 JSON 美化与压缩。",
       },
+      "image-converter": {
+        name: "图片格式转换",
+        description:
+          "在浏览器本地批量转换 PNG、JPG、WebP、GIF、SVG，支持 ZIP 导入与 ZIP 下载。",
+        tags: ["图片", "批量"],
+        ogSubtitle: "本地图片格式互转与 ZIP 批量处理。",
+      },
     },
     toolUi: {
       base64: {
@@ -249,6 +294,35 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
         copyHintFail: "复制失败",
         errTooLong: "输入过长，请控制在 512KB 以内。",
         errParse: "JSON 无效，请检查括号、逗号与引号。",
+      },
+      "image-converter": {
+        cardTitle: "图片格式转换",
+        dropzoneTitle: "拖拽图片或 ZIP 文件到这里",
+        dropzoneBody:
+          "支持 PNG、JPG、WebP、GIF、SVG，也可上传包含图片的 ZIP 压缩包。",
+        pickFiles: "选择文件",
+        labelFormat: "目标格式",
+        labelQuality: "质量",
+        labelScale: "分辨率倍率",
+        summaryFiles: "文件数",
+        summarySize: "总大小",
+        summaryDone: "已转换",
+        emptyQueue: "当前还没有文件，请先添加图片或 ZIP 压缩包。",
+        statusPending: "待转换",
+        statusConverting: "转换中...",
+        statusDone: "完成",
+        convertAll: "全部转换",
+        downloadZip: "下载 ZIP",
+        clear: "清空列表",
+        errInvalidZip: "无法读取该 ZIP 文件。",
+        errTooManyFiles: "文件数量过多，最多允许 {max} 个。",
+        errTooLargeTotal: "文件总大小过大，限制为 {max}。",
+        errConvertFailed: "该文件转换失败。",
+        errZipBuild: "打包输出 ZIP 失败。",
+        noticeNoSupportedFiles: "未检测到可处理的图片文件。",
+        noticeZipNoImages: "ZIP 中未找到可处理的图片。",
+        disclaimerGif: "动画 GIF 输入仅转换第一帧，GIF 输出会进行 256 色量化。",
+        disclaimerSvg: "位图转 SVG 为内嵌位图包装，不是矢量描摹。",
       },
     },
     metadata: {

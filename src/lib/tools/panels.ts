@@ -11,6 +11,7 @@ export const toolPanelLoaders: Record<
   base64: () => import("@/lib/tools/base64/tool-panel"),
   uuid: () => import("@/lib/tools/uuid/tool-panel"),
   "json-formatter": () => import("@/lib/tools/json-formatter/tool-panel"),
+  "image-converter": () => import("@/lib/tools/image-converter/tool-panel"),
 };
 
 export function getToolPanelLoader(

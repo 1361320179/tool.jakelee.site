@@ -67,6 +67,12 @@ export type ToolsSiteDictionary = {
       ogSubtitle: string;
       tags: string[];
     };
+    "image-converter": {
+      name: string;
+      description: string;
+      ogSubtitle: string;
+      tags: string[];
+    };
   };
   toolUi: {
     base64: {
@@ -114,6 +120,34 @@ export type ToolsSiteDictionary = {
       copyHintFail: string;
       errTooLong: string;
       errParse: string;
+    };
+    "image-converter": {
+      cardTitle: string;
+      dropzoneTitle: string;
+      dropzoneBody: string;
+      pickFiles: string;
+      labelFormat: string;
+      labelQuality: string;
+      labelScale: string;
+      summaryFiles: string;
+      summarySize: string;
+      summaryDone: string;
+      emptyQueue: string;
+      statusPending: string;
+      statusConverting: string;
+      statusDone: string;
+      convertAll: string;
+      downloadZip: string;
+      clear: string;
+      errInvalidZip: string;
+      errTooManyFiles: string;
+      errTooLargeTotal: string;
+      errConvertFailed: string;
+      errZipBuild: string;
+      noticeNoSupportedFiles: string;
+      noticeZipNoImages: string;
+      disclaimerGif: string;
+      disclaimerSvg: string;
     };
   };
   metadata: {

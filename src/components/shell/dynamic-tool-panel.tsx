@@ -25,10 +25,16 @@ const JsonFormatterPanel = dynamic(
   { loading: () => panelLoading },
 );
 
+const ImageConverterPanel = dynamic(
+  () => import("@/lib/tools/image-converter/tool-panel"),
+  { loading: () => panelLoading },
+);
+
 const panels = {
   base64: Base64Panel,
   uuid: UuidPanel,
   "json-formatter": JsonFormatterPanel,
+  "image-converter": ImageConverterPanel,
 } as const;
 
 type ToolSlug = keyof typeof panels;
