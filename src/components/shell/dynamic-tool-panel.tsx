@@ -20,9 +20,15 @@ const UuidPanel = dynamic(
   { loading: () => panelLoading },
 );
 
+const JsonFormatterPanel = dynamic(
+  () => import("@/lib/tools/json-formatter/tool-panel"),
+  { loading: () => panelLoading },
+);
+
 const panels = {
   base64: Base64Panel,
   uuid: UuidPanel,
+  "json-formatter": JsonFormatterPanel,
 } as const;
 
 type ToolSlug = keyof typeof panels;

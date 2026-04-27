@@ -70,6 +70,13 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
         tags: ["ID", "Dev"],
         ogSubtitle: "Cryptographically random UUID v4 generator.",
       },
+      "json-formatter": {
+        name: "JSON formatter",
+        description:
+          "Validate, prettify, or minify JSON locally in your browser — nothing is uploaded.",
+        tags: ["JSON", "Dev"],
+        ogSubtitle: "Local JSON prettify and minify.",
+      },
     },
     toolUi: {
       base64: {
@@ -102,6 +109,21 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
         errMax: "At most 200 at once.",
         errInvalid: "Invalid count.",
         listAria: "Generated UUIDs",
+      },
+      "json-formatter": {
+        cardTitle: "JSON formatter",
+        labelInput: "Input",
+        labelOutput: "Output",
+        placeholderInput: "Paste JSON here, then choose Format or Minify",
+        placeholderOutput: "Formatted JSON appears here",
+        format: "Format",
+        minify: "Minify",
+        copy: "Copy output",
+        clear: "Clear",
+        copyHintOk: "Copied",
+        copyHintFail: "Copy failed",
+        errTooLong: "Input is too long (max 512KB).",
+        errParse: "Invalid JSON. Check brackets, commas, and quotes.",
       },
     },
     metadata: {
@@ -174,6 +196,12 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
         tags: ["ID", "开发"],
         ogSubtitle: "安全随机 UUID v4 生成器。",
       },
+      "json-formatter": {
+        name: "JSON 格式化",
+        description: "在浏览器本地校验、美化或压缩 JSON，不上传服务器。",
+        tags: ["JSON", "开发"],
+        ogSubtitle: "本地 JSON 美化与压缩。",
+      },
     },
     toolUi: {
       base64: {
@@ -206,6 +234,21 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
         errMax: "单次最多 200 个。",
         errInvalid: "数量无效。",
         listAria: "已生成的 UUID",
+      },
+      "json-formatter": {
+        cardTitle: "JSON 格式化",
+        labelInput: "输入",
+        labelOutput: "输出",
+        placeholderInput: "在此粘贴 JSON，然后点击「格式化」或「压缩」",
+        placeholderOutput: "格式化后的 JSON 将显示在此",
+        format: "格式化",
+        minify: "压缩",
+        copy: "复制输出",
+        clear: "清空",
+        copyHintOk: "已复制",
+        copyHintFail: "复制失败",
+        errTooLong: "输入过长，请控制在 512KB 以内。",
+        errParse: "JSON 无效，请检查括号、逗号与引号。",
       },
     },
     metadata: {

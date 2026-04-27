@@ -61,6 +61,12 @@ export type ToolsSiteDictionary = {
       ogSubtitle: string;
       tags: string[];
     };
+    "json-formatter": {
+      name: string;
+      description: string;
+      ogSubtitle: string;
+      tags: string[];
+    };
   };
   toolUi: {
     base64: {
@@ -93,6 +99,21 @@ export type ToolsSiteDictionary = {
       errMax: string;
       errInvalid: string;
       listAria: string;
+    };
+    "json-formatter": {
+      cardTitle: string;
+      labelInput: string;
+      labelOutput: string;
+      placeholderInput: string;
+      placeholderOutput: string;
+      format: string;
+      minify: string;
+      copy: string;
+      clear: string;
+      copyHintOk: string;
+      copyHintFail: string;
+      errTooLong: string;
+      errParse: string;
     };
   };
   metadata: {
