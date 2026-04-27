@@ -30,6 +30,22 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
     toolPage: {
       breadcrumbTools: "Tools",
       backToMain: "Back to jakelee.site",
+      share: {
+        sectionTitle: "Share this tool",
+        copyLink: "Copy link",
+        systemShare: "Share…",
+        copyOk: "Link copied",
+        copyFail: "Copy failed",
+        platforms: {
+          x: "Share on X",
+          facebook: "Share on Facebook",
+          linkedin: "Share on LinkedIn",
+          reddit: "Share on Reddit",
+          telegram: "Share on Telegram",
+          whatsapp: "Share on WhatsApp",
+          weibo: "Share on Weibo",
+        },
+      },
     },
     notFound: {
       title: "Page not found",
@@ -119,6 +135,22 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
     toolPage: {
       breadcrumbTools: "工具",
       backToMain: "返回 jakelee.site",
+      share: {
+        sectionTitle: "分享此工具",
+        copyLink: "复制链接",
+        systemShare: "系统分享…",
+        copyOk: "链接已复制",
+        copyFail: "复制失败",
+        platforms: {
+          x: "分享到 X",
+          facebook: "分享到 Facebook",
+          linkedin: "分享到 LinkedIn",
+          reddit: "分享到 Reddit",
+          telegram: "分享到 Telegram",
+          whatsapp: "分享到 WhatsApp",
+          weibo: "分享到微博",
+        },
+      },
     },
     notFound: {
       title: "页面不存在",

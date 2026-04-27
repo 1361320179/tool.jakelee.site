@@ -22,6 +22,22 @@ export type ToolsSiteDictionary = {
   toolPage: {
     breadcrumbTools: string;
     backToMain: string;
+    share: {
+      sectionTitle: string;
+      copyLink: string;
+      systemShare: string;
+      copyOk: string;
+      copyFail: string;
+      platforms: {
+        x: string;
+        facebook: string;
+        linkedin: string;
+        reddit: string;
+        telegram: string;
+        whatsapp: string;
+        weibo: string;
+      };
+    };
   };
   notFound: {
     title: string;

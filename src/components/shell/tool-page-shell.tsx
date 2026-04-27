@@ -8,6 +8,7 @@ import type { ToolPageSummary } from "@/lib/tools/types";
 import { getLocalizedPath } from "@/i18n/config";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
+import { ToolShareBar } from "@/components/shell/tool-share-bar";
 
 export function ToolPageShell({
   tool,
@@ -44,6 +45,7 @@ export function ToolPageShell({
             <p className="text-xs text-muted-foreground">
               {tool.tags.map((t) => `#${t}`).join(" ")}
             </p>
+            <ToolShareBar tool={tool} />
             <a
               href={mainWithLocale}
               className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline"
