@@ -12,7 +12,7 @@ function Card({
       data-slot="card"
       data-size={size}
       className={cn(
-        "group/card flex flex-col gap-4 overflow-hidden rounded-3xl border border-border/70 bg-card/85 py-5 text-sm text-card-foreground shadow-[0_18px_45px_-34px_hsl(var(--shadow-color)/0.42)] backdrop-blur-xl transition-[transform,box-shadow,border-color,background-color] duration-300 ease-[var(--ease-smooth)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 hover:-translate-y-0.5 hover:border-border data-[size=sm]:gap-3 data-[size=sm]:py-4 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-3xl *:[img:last-child]:rounded-b-3xl",
+        "group/card flex flex-col gap-4 overflow-hidden rounded-3xl border border-border/70 bg-card/85 py-5 text-sm text-card-foreground shadow-[0_18px_45px_-34px_hsl(var(--shadow-color)/0.42)] backdrop-blur-xl transition-[box-shadow,border-color,background-color] duration-300 ease-[var(--ease-smooth)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 hover:border-border data-[size=sm]:gap-3 data-[size=sm]:py-4 data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-3xl *:[img:last-child]:rounded-b-3xl",
         className,
       )}
       {...props}

@@ -47,8 +47,8 @@ export function AnimationDetailView({
 
   if (!definition) return null;
 
-  const css = React.useMemo(() => definition.getCss(vars), [definition, vars]);
-  const html = React.useMemo(() => definition.getHtml(), [definition]);
+  const css = definition.getCss(vars);
+  const html = definition.getHtml();
 
   const copy = async (text: string) => {
     const ok = await copyToClipboard(text);
