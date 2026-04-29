@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 import { locales } from "@/i18n/config";
-import { getCssAnimationSitemapPathnames } from "@/lib/css-animations/queries";
+import { getCssAnimationSitemapPathnames } from "@/lib/tools/css-animations/queries";
 import { getAllToolSlugs } from "@/lib/tools/registry";
 
 export default function sitemap(): MetadataRoute.Sitemap {

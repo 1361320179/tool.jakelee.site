@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Loader2, MousePointerClick, Type } from "lucide-react";
-import { CssAnimationsShell } from "@/components/css-animations/css-animations-shell";
+import { CssAnimationsShell } from "@/components/tools/css-animations/css-animations-shell";
 import { siteConfig } from "@/config/site";
 import { locales } from "@/i18n/config";
 import { getLocalizedPath } from "@/i18n/config";
@@ -9,8 +9,11 @@ import { getLocaleAlternates, getLocaleDictionary } from "@/i18n/server";
 import {
   CSS_ANIMATIONS_TOOL_BASE,
   cssAnimationsCategoryPath,
-} from "@/lib/css-animations/paths";
-import { ANIMATION_CATEGORIES, type AnimationCategory } from "@/lib/css-animations/types";
+} from "@/lib/tools/css-animations/paths";
+import {
+  ANIMATION_CATEGORIES,
+  type AnimationCategory,
+} from "@/lib/tools/css-animations/types";
 import { cn } from "@/lib/utils";
 
 const categoryIcons: Record<AnimationCategory, typeof Loader2> = {
@@ -27,7 +30,9 @@ export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { lang } = await params;
   const { locale, dictionary } = await getLocaleDictionary(lang);
   const c = dictionary.cssAnimations;
@@ -77,12 +82,17 @@ export default async function CssAnimationsHubPage({ params }: PageProps) {
         <h1 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
           {c.metadata.hubTitle}
         </h1>
-        <p className="max-w-2xl text-muted-foreground">{c.metadata.hubDescription}</p>
+        <p className="max-w-2xl text-muted-foreground">
+          {c.metadata.hubDescription}
+        </p>
         <p className="text-sm text-muted-foreground">{c.hub.sub}</p>
       </header>
 
       <section aria-labelledby="css-anim-cats-heading" className="space-y-4">
-        <h2 id="css-anim-cats-heading" className="font-heading text-lg font-semibold">
+        <h2
+          id="css-anim-cats-heading"
+          className="font-heading text-lg font-semibold"
+        >
           {c.hub.browseCategories}
         </h2>
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -92,7 +102,10 @@ export default async function CssAnimationsHubPage({ params }: PageProps) {
             return (
               <li key={cat}>
                 <Link
-                  href={getLocalizedPath(locale, cssAnimationsCategoryPath(cat))}
+                  href={getLocalizedPath(
+                    locale,
+                    cssAnimationsCategoryPath(cat),
+                  )}
                   className={cn(
                     "surface-panel group flex h-full flex-col gap-3 p-5 sm:p-6",
                     "hover:border-primary/35 hover:shadow-lg",
@@ -105,8 +118,12 @@ export default async function CssAnimationsHubPage({ params }: PageProps) {
                     <h3 className="font-heading text-base font-semibold text-foreground group-hover:text-primary sm:text-lg">
                       {meta.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground">{meta.description}</p>
-                    <p className="pt-1 text-sm font-medium text-primary">{meta.open} →</p>
+                    <p className="text-sm text-muted-foreground">
+                      {meta.description}
+                    </p>
+                    <p className="pt-1 text-sm font-medium text-primary">
+                      {meta.open} →
+                    </p>
                   </div>
                 </Link>
               </li>

@@ -9,15 +9,18 @@ import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { getLocalizedPath } from "@/i18n/config";
-import type { AnimationCategory, MotionVars } from "@/lib/css-animations/types";
-import { defaultMotionVars } from "@/lib/css-animations/types";
+import type {
+  AnimationCategory,
+  MotionVars,
+} from "@/lib/tools/css-animations/types";
+import { defaultMotionVars } from "@/lib/tools/css-animations/types";
 import { copyToClipboard } from "@/lib/shared/clipboard";
-import { cssAnimationsDetailPath } from "@/lib/css-animations/paths";
+import { cssAnimationsDetailPath } from "@/lib/tools/css-animations/paths";
 import {
   getAnimationByCategoryAndSlug,
   itemDictKey,
   listAnimationsInCategory,
-} from "@/lib/css-animations/queries";
+} from "@/lib/tools/css-animations/queries";
 
 const HEX = /^#[0-9a-fA-F]{6}$/;
 
@@ -96,7 +99,12 @@ export function AnimationDetailView({
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-base">{ui.htmlLabel}</CardTitle>
-                <Button type="button" variant="outline" size="sm" onClick={() => copy(html)}>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => copy(html)}
+                >
                   <Copy className="size-3.5" aria-hidden />
                   {ui.copyHtml}
                 </Button>
@@ -110,7 +118,12 @@ export function AnimationDetailView({
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-base">{ui.cssLabel}</CardTitle>
-                <Button type="button" variant="outline" size="sm" onClick={() => copy(css)}>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => copy(css)}
+                >
                   <Copy className="size-3.5" aria-hidden />
                   {ui.copyCss}
                 </Button>
@@ -133,7 +146,9 @@ export function AnimationDetailView({
               <div className="space-y-2">
                 <div className="flex items-center justify-between gap-2">
                   <Label htmlFor="ca-speed">{ui.paramSpeed}</Label>
-                  <span className="text-xs text-muted-foreground">{vars.speed.toFixed(2)}×</span>
+                  <span className="text-xs text-muted-foreground">
+                    {vars.speed.toFixed(2)}×
+                  </span>
                 </div>
                 <input
                   id="ca-speed"
@@ -143,7 +158,10 @@ export function AnimationDetailView({
                   step={0.05}
                   value={vars.speed}
                   onChange={(e) =>
-                    setVars((p) => ({ ...p, speed: clamp(Number(e.target.value), 0.5, 2) }))
+                    setVars((p) => ({
+                      ...p,
+                      speed: clamp(Number(e.target.value), 0.5, 2),
+                    }))
                   }
                   className="w-full accent-primary"
                 />
@@ -157,7 +175,11 @@ export function AnimationDetailView({
                   <input
                     id="ca-color"
                     type="color"
-                    value={HEX.test(vars.color) ? vars.color : defaultMotionVars.color}
+                    value={
+                      HEX.test(vars.color)
+                        ? vars.color
+                        : defaultMotionVars.color
+                    }
                     onChange={(e) => setColor(e.target.value)}
                     className="size-10 cursor-pointer rounded-md border border-border bg-background p-0.5"
                   />
@@ -178,7 +200,9 @@ export function AnimationDetailView({
               <div className="space-y-2">
                 <div className="flex items-center justify-between gap-2">
                   <Label htmlFor="ca-size">{ui.paramSize}</Label>
-                  <span className="text-xs text-muted-foreground">{vars.size.toFixed(2)}×</span>
+                  <span className="text-xs text-muted-foreground">
+                    {vars.size.toFixed(2)}×
+                  </span>
                 </div>
                 <input
                   id="ca-size"
@@ -188,14 +212,22 @@ export function AnimationDetailView({
                   step={0.05}
                   value={vars.size}
                   onChange={(e) =>
-                    setVars((p) => ({ ...p, size: clamp(Number(e.target.value), 0.5, 2) }))
+                    setVars((p) => ({
+                      ...p,
+                      size: clamp(Number(e.target.value), 0.5, 2),
+                    }))
                   }
                   className="w-full accent-primary"
                 />
               </div>
             ) : null}
 
-            <Button type="button" variant="secondary" className="w-full" onClick={() => setVars({ ...defaultMotionVars })}>
+            <Button
+              type="button"
+              variant="secondary"
+              className="w-full"
+              onClick={() => setVars({ ...defaultMotionVars })}
+            >
               {ui.reset}
             </Button>
           </CardContent>
@@ -204,7 +236,9 @@ export function AnimationDetailView({
 
       {others.length > 0 ? (
         <section className="space-y-3">
-          <h2 className="font-heading text-lg font-semibold">{ui.relatedHeading}</h2>
+          <h2 className="font-heading text-lg font-semibold">
+            {ui.relatedHeading}
+          </h2>
           <ul className="flex flex-wrap gap-2">
             {others.map((a) => {
               const key = itemDictKey(a.category, a.slug);
@@ -217,7 +251,9 @@ export function AnimationDetailView({
                       locale,
                       cssAnimationsDetailPath(a.category, a.slug),
                     )}
-                    className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+                    className={cn(
+                      buttonVariants({ variant: "outline", size: "sm" }),
+                    )}
                   >
                     {label}
                   </Link>

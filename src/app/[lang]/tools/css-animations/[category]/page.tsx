@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CssAnimationsShell } from "@/components/css-animations/css-animations-shell";
+import { CssAnimationsShell } from "@/components/tools/css-animations/css-animations-shell";
 import { siteConfig } from "@/config/site";
 import { locales } from "@/i18n/config";
 import { getLocalizedPath } from "@/i18n/config";
@@ -10,13 +10,16 @@ import {
   CSS_ANIMATIONS_TOOL_BASE,
   cssAnimationsCategoryPath,
   cssAnimationsDetailPath,
-} from "@/lib/css-animations/paths";
-import { ANIMATION_CATEGORIES, type AnimationCategory } from "@/lib/css-animations/types";
+} from "@/lib/tools/css-animations/paths";
+import {
+  ANIMATION_CATEGORIES,
+  type AnimationCategory,
+} from "@/lib/tools/css-animations/types";
 import {
   isAnimationCategory,
   itemDictKey,
   listAnimationsInCategory,
-} from "@/lib/css-animations/queries";
+} from "@/lib/tools/css-animations/queries";
 import { cn } from "@/lib/utils";
 
 type PageProps = {
@@ -29,7 +32,9 @@ export function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { lang, category } = await params;
   const { locale, dictionary } = await getLocaleDictionary(lang);
   if (!isAnimationCategory(category)) {
@@ -100,7 +105,10 @@ export default async function CssAnimationsCategoryPage({ params }: PageProps) {
           return (
             <li key={a.slug}>
               <Link
-                href={getLocalizedPath(locale, cssAnimationsDetailPath(a.category, a.slug))}
+                href={getLocalizedPath(
+                  locale,
+                  cssAnimationsDetailPath(a.category, a.slug),
+                )}
                 className={cn(
                   "surface-panel group block h-full p-5 sm:p-6",
                   "hover:border-primary/35 hover:shadow-lg",
@@ -109,8 +117,12 @@ export default async function CssAnimationsCategoryPage({ params }: PageProps) {
                 <h2 className="font-heading text-base font-semibold text-foreground group-hover:text-primary sm:text-lg">
                   {itemMeta.title}
                 </h2>
-                <p className="mt-1 text-sm text-muted-foreground">{itemMeta.description}</p>
-                <p className="pt-2 text-sm font-medium text-primary">{catMeta.open} →</p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {itemMeta.description}
+                </p>
+                <p className="pt-2 text-sm font-medium text-primary">
+                  {catMeta.open} →
+                </p>
               </Link>
             </li>
           );

@@ -1,17 +1,29 @@
-import { SiteFooter } from "@/components/site/site-footer";
-import { SiteHeader } from "@/components/site/site-header";
+import { getLocaleDictionary } from "@/i18n/server";
+import { ToolPageShell } from "@/components/shell/tool-page-shell";
 
-export default function CssAnimationsToolLayout({
-  children,
-}: {
+type Props = {
   children: React.ReactNode;
-}) {
+  params: Promise<{ lang: string }>;
+};
+
+export default async function CssAnimationsToolLayout({
+  children,
+  params,
+}: Props) {
+  const { lang } = await params;
+  const { dictionary } = await getLocaleDictionary(lang);
+  const tool = dictionary.tools["css-animations"];
+
   return (
-    <div className="relative flex min-h-screen flex-col">
-      <div className="tool-aurora" aria-hidden />
-      <SiteHeader />
-      <main className="flex-1 pb-4 pt-6 sm:pt-8">{children}</main>
-      <SiteFooter />
-    </div>
+    <ToolPageShell
+      tool={{
+        slug: "css-animations",
+        name: tool.name,
+        description: tool.description,
+        tags: tool.tags,
+      }}
+    >
+      {children}
+    </ToolPageShell>
   );
 }

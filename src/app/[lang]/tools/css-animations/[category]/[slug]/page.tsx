@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { AnimationDetailView } from "@/components/css-animations/animation-detail-view";
-import { CssAnimationsShell } from "@/components/css-animations/css-animations-shell";
+import { AnimationDetailView } from "@/components/tools/css-animations/animation-detail-view";
+import { CssAnimationsShell } from "@/components/tools/css-animations/css-animations-shell";
 import { siteConfig } from "@/config/site";
 import { locales } from "@/i18n/config";
 import { getLocaleAlternates, getLocaleDictionary } from "@/i18n/server";
@@ -9,14 +9,14 @@ import {
   CSS_ANIMATIONS_TOOL_BASE,
   cssAnimationsCategoryPath,
   cssAnimationsDetailPath,
-} from "@/lib/css-animations/paths";
-import type { AnimationCategory } from "@/lib/css-animations/types";
+} from "@/lib/tools/css-animations/paths";
+import type { AnimationCategory } from "@/lib/tools/css-animations/types";
 import {
   getAllAnimationDetailStaticParams,
   getAnimationByCategoryAndSlug,
   isAnimationCategory,
   itemDictKey,
-} from "@/lib/css-animations/queries";
+} from "@/lib/tools/css-animations/queries";
 
 type PageProps = {
   params: Promise<{ lang: string; category: string; slug: string }>;
@@ -32,7 +32,9 @@ export function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { lang, category, slug } = await params;
   const { locale, dictionary } = await getLocaleDictionary(lang);
   const anim = getAnimationByCategoryAndSlug(category, slug);
@@ -93,7 +95,10 @@ export default async function CssAnimationDetailPage({ params }: PageProps) {
       crumbs={[
         { label: dictionary.toolPage.breadcrumbTools, href: "/" },
         { label: c.metadata.hubTitle, href: CSS_ANIMATIONS_TOOL_BASE },
-        { label: catMeta.title, href: cssAnimationsCategoryPath(anim.category) },
+        {
+          label: catMeta.title,
+          href: cssAnimationsCategoryPath(anim.category),
+        },
         { label: itemMeta.breadcrumb },
       ]}
     >
