@@ -21,3 +21,8 @@ export function getToolPanelLoader(
   | undefined {
   return toolPanelLoaders[slug];
 }
+
+/** Slugs that render `DynamicToolPanel` (excludes hub-only tools like `css-animations`). */
+export function getPanelToolSlugs(): string[] {
+  return Object.keys(toolPanelLoaders);
+}

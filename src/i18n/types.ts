@@ -18,6 +18,11 @@ export type ToolsSiteDictionary = {
     eyebrow: string;
     heroBody: string;
     allTools: string;
+    cssAnimationsCta: {
+      title: string;
+      body: string;
+      linkLabel: string;
+    };
   };
   toolPage: {
     breadcrumbTools: string;
@@ -68,6 +73,12 @@ export type ToolsSiteDictionary = {
       tags: string[];
     };
     "image-converter": {
+      name: string;
+      description: string;
+      ogSubtitle: string;
+      tags: string[];
+    };
+    "css-animations": {
       name: string;
       description: string;
       ogSubtitle: string;
@@ -153,5 +164,48 @@ export type ToolsSiteDictionary = {
   metadata: {
     titleTemplate: string;
     defaultDescription: string;
+  };
+  cssAnimations: {
+    metadata: {
+      titleTemplate: string;
+      hubTitle: string;
+      hubDescription: string;
+    };
+    hub: {
+      eyebrow: string;
+      sub: string;
+      browseCategories: string;
+    };
+    categories: {
+      loaders: { title: string; description: string; open: string };
+      "hover-buttons": { title: string; description: string; open: string };
+      text: { title: string; description: string; open: string };
+    };
+    ui: {
+      copy: string;
+      copyHtml: string;
+      copyCss: string;
+      reset: string;
+      previewAria: string;
+      htmlLabel: string;
+      cssLabel: string;
+      paramSpeed: string;
+      paramColor: string;
+      paramSize: string;
+      copyOk: string;
+      copyFail: string;
+      relatedHeading: string;
+      controlsTitle: string;
+    };
+    /** Keys: `category/slug` e.g. `loaders/dot-pulse` */
+    items: Record<
+      string,
+      {
+        title: string;
+        description: string;
+        ogSubtitle: string;
+        breadcrumb: string;
+      }
+    >;
   };
 };

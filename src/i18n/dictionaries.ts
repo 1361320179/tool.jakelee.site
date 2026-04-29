@@ -26,6 +26,12 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
       heroBody:
         "All tools run in your browser — nothing is uploaded, so your data stays on your device.",
       allTools: "All tools",
+      cssAnimationsCta: {
+        title: "CSS animation snippets",
+        body:
+          "Loading spinners, button hovers, and text motion — preview, tweak, and copy HTML/CSS.",
+        linkLabel: "Browse CSS animations",
+      },
     },
     toolPage: {
       breadcrumbTools: "Tools",
@@ -83,6 +89,13 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           "Convert PNG, JPG, WebP, GIF, and SVG in batches locally in your browser, including ZIP import and ZIP download.",
         tags: ["Image", "Batch"],
         ogSubtitle: "Local image format conversion with ZIP batch workflow.",
+      },
+      "css-animations": {
+        name: "CSS animation snippets",
+        description:
+          "Loading spinners, button hovers, and text motion — preview, tweak speed/color/size, and copy HTML/CSS in your browser.",
+        tags: ["CSS", "Animation", "UI"],
+        ogSubtitle: "Copy-paste CSS loaders, hover buttons, and text effects.",
       },
     },
     toolUi: {
@@ -169,6 +182,120 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
       defaultDescription:
         "A tools subsite of jakelee.site — practical browser-based utilities.",
     },
+    cssAnimations: {
+      metadata: {
+        titleTemplate: "%s · CSS animations | Jake Lee",
+        hubTitle: "CSS animations",
+        hubDescription:
+          "Browse loading spinners, button hover effects, and text motion snippets. Copy HTML and CSS, tweak speed, color, and size — all in your browser.",
+      },
+      hub: {
+        eyebrow: "Copy-paste motion snippets",
+        sub: "Each preset has its own page with live preview, code, and controls.",
+        browseCategories: "Browse categories",
+      },
+      categories: {
+        loaders: {
+          title: "CSS loading animations",
+          description:
+            "Lightweight loaders and spinners for dashboards, buttons, and skeleton states.",
+          open: "Open collection",
+        },
+        "hover-buttons": {
+          title: "Button hover effects",
+          description:
+            "Micro-interactions for links and buttons using transitions and shadows.",
+          open: "Open collection",
+        },
+        text: {
+          title: "CSS text animations",
+          description:
+            "Headline treatments: shimmer, typing masks, and playful letter motion.",
+          open: "Open collection",
+        },
+      },
+      ui: {
+        copy: "Copy",
+        copyHtml: "Copy HTML",
+        copyCss: "Copy CSS",
+        reset: "Reset",
+        previewAria: "Live preview",
+        htmlLabel: "HTML",
+        cssLabel: "CSS",
+        paramSpeed: "Speed",
+        paramColor: "Color",
+        paramSize: "Size",
+        copyOk: "Copied",
+        copyFail: "Copy failed",
+        relatedHeading: "More in this category",
+        controlsTitle: "Parameters",
+      },
+      items: {
+        "loaders/dot-pulse": {
+          title: "Dot pulse loading animation",
+          description:
+            "Three pulsing dots in pure CSS — great for inline loading states and compact UI.",
+          ogSubtitle: "CSS loading animation · dot pulse",
+          breadcrumb: "Dot pulse",
+        },
+        "loaders/dual-ring": {
+          title: "Dual ring spinner",
+          description:
+            "Two counter-rotating rings for a crisp, modern CSS loading animation.",
+          ogSubtitle: "CSS loading animation · dual ring",
+          breadcrumb: "Dual ring",
+        },
+        "loaders/bars": {
+          title: "Stretching bars loader",
+          description:
+            "Vertical bars that stretch in sequence — a classic CSS loading animation pattern.",
+          ogSubtitle: "CSS loading animation · bars",
+          breadcrumb: "Bars",
+        },
+        "hover-buttons/underline-grow": {
+          title: "Underline grow on hover",
+          description:
+            "A left-to-right underline that expands when users hover or focus the button.",
+          ogSubtitle: "Button hover effect · underline",
+          breadcrumb: "Underline grow",
+        },
+        "hover-buttons/lift-shadow": {
+          title: "Lift and shadow hover",
+          description:
+            "Subtle lift with a soft shadow ramp — polished button hover effect in CSS.",
+          ogSubtitle: "Button hover effect · lift shadow",
+          breadcrumb: "Lift shadow",
+        },
+        "hover-buttons/glow-outline": {
+          title: "Glow outline hover",
+          description:
+            "Expanding glow ring on hover for call-to-action buttons without extra assets.",
+          ogSubtitle: "Button hover effect · glow",
+          breadcrumb: "Glow outline",
+        },
+        "text/gradient-shimmer": {
+          title: "Gradient shimmer text",
+          description:
+            "Animated gradient clip on headline text — high-impact CSS text animation for marketing.",
+          ogSubtitle: "CSS text animation · shimmer",
+          breadcrumb: "Gradient shimmer",
+        },
+        "text/typing-clip": {
+          title: "Typing clip text animation",
+          description:
+            "A stepped width reveal with a blinking caret — pure CSS text animation.",
+          ogSubtitle: "CSS text animation · typing",
+          breadcrumb: "Typing clip",
+        },
+        "text/bounce-letters": {
+          title: "Bouncing letters",
+          description:
+            "Staggered vertical bounce on each character for playful CSS text animation.",
+          ogSubtitle: "CSS text animation · bounce",
+          breadcrumb: "Bounce letters",
+        },
+      },
+    },
   },
   zh: {
     site: {
@@ -191,6 +318,11 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
       heroBody:
         "所有工具都在浏览器本地完成处理，不上传您的任何内容，保障您的隐私安全。",
       allTools: "全部工具",
+      cssAnimationsCta: {
+        title: "CSS 动画片段合集",
+        body: "加载动画、按钮悬停与文字动效——可预览、调参并复制 HTML/CSS。",
+        linkLabel: "浏览 CSS 动画",
+      },
     },
     toolPage: {
       breadcrumbTools: "工具",
@@ -246,6 +378,13 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           "在浏览器本地批量转换 PNG、JPG、WebP、GIF、SVG，支持 ZIP 导入与 ZIP 下载。",
         tags: ["图片", "批量"],
         ogSubtitle: "本地图片格式互转与 ZIP 批量处理。",
+      },
+      "css-animations": {
+        name: "CSS 动画片段",
+        description:
+          "加载动画、按钮悬停与文字动效——在浏览器内预览、调节速度/颜色/尺寸并复制 HTML/CSS。",
+        tags: ["CSS", "动画", "界面"],
+        ogSubtitle: "可复制的 CSS 加载、悬停与文字动效合集。",
       },
     },
     toolUi: {
@@ -328,6 +467,109 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
     metadata: {
       titleTemplate: "%s · 工具 | Jake Lee",
       defaultDescription: "jakelee.site 子网站（实用在线小工具）",
+    },
+    cssAnimations: {
+      metadata: {
+        titleTemplate: "%s · CSS 动画 | Jake Lee",
+        hubTitle: "CSS 动画合集",
+        hubDescription:
+          "收录加载动画、按钮悬停动效与文字动效。可实时预览、复制 HTML/CSS，并调节速度、颜色与尺寸，全部在浏览器本地完成。",
+      },
+      hub: {
+        eyebrow: "可复制的动效片段",
+        sub: "每个预设独立成页，含演示、源码与参数调节。",
+        browseCategories: "按分类浏览",
+      },
+      categories: {
+        loaders: {
+          title: "CSS 加载动画",
+          description: "轻量加载器与转圈动画，适合仪表盘、按钮与骨架屏。",
+          open: "进入合集",
+        },
+        "hover-buttons": {
+          title: "按钮悬停动效",
+          description: "用过渡与阴影实现的链接与按钮微交互。",
+          open: "进入合集",
+        },
+        text: {
+          title: "CSS 文字动画",
+          description: "标题动效：流光渐变、打字遮罩与字母跳动等。",
+          open: "进入合集",
+        },
+      },
+      ui: {
+        copy: "复制",
+        copyHtml: "复制 HTML",
+        copyCss: "复制 CSS",
+        reset: "重置",
+        previewAria: "实时预览",
+        htmlLabel: "HTML",
+        cssLabel: "CSS",
+        paramSpeed: "速度",
+        paramColor: "颜色",
+        paramSize: "尺寸",
+        copyOk: "已复制",
+        copyFail: "复制失败",
+        relatedHeading: "同分类更多",
+        controlsTitle: "参数",
+      },
+      items: {
+        "loaders/dot-pulse": {
+          title: "圆点脉冲加载动画",
+          description:
+            "三枚圆点呼吸式缩放与透明变化，适合内联加载与紧凑界面。",
+          ogSubtitle: "CSS 加载动画 · 圆点脉冲",
+          breadcrumb: "圆点脉冲",
+        },
+        "loaders/dual-ring": {
+          title: "双环旋转加载器",
+          description: "内外双环反向旋转，简洁现代的纯 CSS 加载动画。",
+          ogSubtitle: "CSS 加载动画 · 双环",
+          breadcrumb: "双环",
+        },
+        "loaders/bars": {
+          title: "竖条拉伸加载动画",
+          description: "竖条依次拉伸的经典加载条效果，纯 CSS 实现。",
+          ogSubtitle: "CSS 加载动画 · 竖条",
+          breadcrumb: "竖条",
+        },
+        "hover-buttons/underline-grow": {
+          title: "下划线生长悬停",
+          description: "悬停或键盘聚焦时，从左向右展开的下划线按钮动效。",
+          ogSubtitle: "按钮悬停 · 下划线",
+          breadcrumb: "下划线生长",
+        },
+        "hover-buttons/lift-shadow": {
+          title: "上浮与阴影悬停",
+          description: "轻微上移并增强阴影，适合主按钮的悬停反馈。",
+          ogSubtitle: "按钮悬停 · 上浮阴影",
+          breadcrumb: "上浮阴影",
+        },
+        "hover-buttons/glow-outline": {
+          title: "外发光描边悬停",
+          description: "悬停时扩散光晕，适合强调型 CTA，无需额外图片。",
+          ogSubtitle: "按钮悬停 · 发光",
+          breadcrumb: "外发光",
+        },
+        "text/gradient-shimmer": {
+          title: "渐变流光文字",
+          description: "标题文字上的流动渐变高光，适合落地页与营销横幅。",
+          ogSubtitle: "CSS 文字动画 · 流光",
+          breadcrumb: "渐变流光",
+        },
+        "text/typing-clip": {
+          title: "打字机遮罩文字动画",
+          description: "分步展开宽度配合闪烁光标，纯 CSS 文字动画。",
+          ogSubtitle: "CSS 文字动画 · 打字",
+          breadcrumb: "打字遮罩",
+        },
+        "text/bounce-letters": {
+          title: "字母弹跳动画",
+          description: "逐字错开的上下弹跳，活泼的标题文字动效。",
+          ogSubtitle: "CSS 文字动画 · 弹跳",
+          breadcrumb: "字母弹跳",
+        },
+      },
     },
   },
 };

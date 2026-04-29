@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getToolBySlug, getAllToolSlugs } from "@/lib/tools/registry";
-import { getToolPanelLoader } from "@/lib/tools/panels";
+import { getToolBySlug } from "@/lib/tools/registry";
+import { getPanelToolSlugs, getToolPanelLoader } from "@/lib/tools/panels";
 import { DynamicToolPanel } from "@/components/shell/dynamic-tool-panel";
 import { siteConfig } from "@/config/site";
 import { locales } from "@/i18n/config";
@@ -13,7 +13,7 @@ type PageProps = {
 
 export function generateStaticParams() {
   return locales.flatMap((lang) =>
-    getAllToolSlugs().map((slug) => ({ lang, slug })),
+    getPanelToolSlugs().map((slug) => ({ lang, slug })),
   );
 }
 
