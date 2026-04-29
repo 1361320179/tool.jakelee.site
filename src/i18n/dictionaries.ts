@@ -264,6 +264,20 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           ogSubtitle: "CSS loading animation · bars",
           breadcrumb: "Bars",
         },
+        "loaders/orbit-dots": {
+          title: "Orbit dots loader",
+          description:
+            "Nested orbit rings with rotating dots and a bright center for modern loading states.",
+          ogSubtitle: "CSS loading animation · orbit dots",
+          breadcrumb: "Orbit dots",
+        },
+        "loaders/ripple-ring": {
+          title: "Ripple ring loader",
+          description:
+            "Concentric rings expand and fade like ripples, ideal for calm waiting feedback.",
+          ogSubtitle: "CSS loading animation · ripple ring",
+          breadcrumb: "Ripple ring",
+        },
         "hover-buttons/underline-grow": {
           title: "Underline grow on hover",
           description:
@@ -284,6 +298,20 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
             "Expanding glow ring on hover for call-to-action buttons without extra assets.",
           ogSubtitle: "Button hover effect · glow",
           breadcrumb: "Glow outline",
+        },
+        "hover-buttons/fill-sweep": {
+          title: "Fill sweep hover button",
+          description:
+            "Gradient fill sweeps across the button on hover for clear, satisfying feedback.",
+          ogSubtitle: "Button hover effect · fill sweep",
+          breadcrumb: "Fill sweep",
+        },
+        "hover-buttons/icon-slide": {
+          title: "Icon slide hover button",
+          description:
+            "Button icon glides forward on hover while the surface lifts slightly for momentum.",
+          ogSubtitle: "Button hover effect · icon slide",
+          breadcrumb: "Icon slide",
         },
         "text/gradient-shimmer": {
           title: "Gradient shimmer text",
@@ -306,6 +334,20 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           ogSubtitle: "CSS text animation · bounce",
           breadcrumb: "Bounce letters",
         },
+        "text/wave-rise": {
+          title: "Wave rise text animation",
+          description:
+            "Characters move upward in a smooth wave sequence for energetic hero headlines.",
+          ogSubtitle: "CSS text animation · wave rise",
+          breadcrumb: "Wave rise",
+        },
+        "text/neon-pulse": {
+          title: "Neon pulse headline",
+          description:
+            "Glowing headline text gently pulses in intensity to highlight key marketing copy.",
+          ogSubtitle: "CSS text animation · neon pulse",
+          breadcrumb: "Neon pulse",
+        },
         "cards/glass-panel": {
           title: "Glassmorphism card hover",
           description:
@@ -320,6 +362,20 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           ogSubtitle: "Card hover effect · gradient border",
           breadcrumb: "Gradient border",
         },
+        "cards/tilt-glow": {
+          title: "Tilt glow card hover",
+          description:
+            "Card tilts subtly with a moving glow orb to add depth and premium interaction feel.",
+          ogSubtitle: "Card hover effect · tilt glow",
+          breadcrumb: "Tilt glow",
+        },
+        "cards/accent-strip": {
+          title: "Accent strip card hover",
+          description:
+            "Top accent line sweeps across the card on hover for clean dashboard-style emphasis.",
+          ogSubtitle: "Card hover effect · accent strip",
+          breadcrumb: "Accent strip",
+        },
         "inputs/float-label": {
           title: "Floating label input",
           description:
@@ -333,6 +389,20 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
             "Input underline grows from center to edges on focus for clear interaction feedback.",
           ogSubtitle: "Input animation · focus expand",
           breadcrumb: "Focus expand",
+        },
+        "inputs/glow-focus-ring": {
+          title: "Glow focus ring input",
+          description:
+            "Input border and glow intensify on focus, making active form fields instantly clear.",
+          ogSubtitle: "Input animation · glow focus ring",
+          breadcrumb: "Glow focus ring",
+        },
+        "inputs/underline-slide": {
+          title: "Underline slide input",
+          description:
+            "A bright underline slides in from the left on focus for crisp, minimal form feedback.",
+          ogSubtitle: "Input animation · underline slide",
+          breadcrumb: "Underline slide",
         },
       },
     },
@@ -583,6 +653,18 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           ogSubtitle: "CSS 加载动画 · 竖条",
           breadcrumb: "竖条",
         },
+        "loaders/orbit-dots": {
+          title: "轨道圆点加载动画",
+          description: "双层轨道圆点围绕中心旋转，节奏平稳，适合现代化加载反馈。",
+          ogSubtitle: "CSS 加载动画 · 轨道圆点",
+          breadcrumb: "轨道圆点",
+        },
+        "loaders/ripple-ring": {
+          title: "涟漪圆环加载动画",
+          description: "同心圆环向外扩散并渐隐，视觉柔和，适合等待态提示。",
+          ogSubtitle: "CSS 加载动画 · 涟漪圆环",
+          breadcrumb: "涟漪圆环",
+        },
         "hover-buttons/underline-grow": {
           title: "下划线生长悬停",
           description: "悬停或键盘聚焦时，从左向右展开的下划线按钮动效。",
@@ -600,6 +682,18 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           description: "悬停时扩散光晕，适合强调型 CTA，无需额外图片。",
           ogSubtitle: "按钮悬停 · 发光",
           breadcrumb: "外发光",
+        },
+        "hover-buttons/fill-sweep": {
+          title: "渐变填充扫过悬停",
+          description: "悬停时渐变色从左向右扫过按钮，反馈明确且观感高级。",
+          ogSubtitle: "按钮悬停 · 填充扫过",
+          breadcrumb: "填充扫过",
+        },
+        "hover-buttons/icon-slide": {
+          title: "图标滑移动效按钮",
+          description: "悬停时图标向前滑动并伴随轻微上浮，动势自然不突兀。",
+          ogSubtitle: "按钮悬停 · 图标滑移",
+          breadcrumb: "图标滑移",
         },
         "text/gradient-shimmer": {
           title: "渐变流光文字",
@@ -619,6 +713,18 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           ogSubtitle: "CSS 文字动画 · 弹跳",
           breadcrumb: "字母弹跳",
         },
+        "text/wave-rise": {
+          title: "波浪上浮文字动画",
+          description: "字符按顺序上浮形成波浪节奏，适合强调标题与主视觉文案。",
+          ogSubtitle: "CSS 文字动画 · 波浪上浮",
+          breadcrumb: "波浪上浮",
+        },
+        "text/neon-pulse": {
+          title: "霓虹脉冲标题文字",
+          description: "文字发光强度缓慢呼吸变化，适合突出重点宣传语。",
+          ogSubtitle: "CSS 文字动画 · 霓虹脉冲",
+          breadcrumb: "霓虹脉冲",
+        },
         "cards/glass-panel": {
           title: "玻璃拟态卡片悬停",
           description: "毛玻璃卡片在悬停时出现柔和光晕与扫光，质感细腻。",
@@ -631,6 +737,18 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           ogSubtitle: "卡片悬停动效 · 渐变边框",
           breadcrumb: "渐变边框",
         },
+        "cards/tilt-glow": {
+          title: "倾斜发光卡片悬停",
+          description: "悬停时卡片轻微倾斜并伴随光晕位移，层次感更强。",
+          ogSubtitle: "卡片悬停动效 · 倾斜发光",
+          breadcrumb: "倾斜发光",
+        },
+        "cards/accent-strip": {
+          title: "强调条扫光卡片",
+          description: "顶部强调线在悬停时扫过，风格克制，适合看板与数据卡片。",
+          ogSubtitle: "卡片悬停动效 · 强调条",
+          breadcrumb: "强调条",
+        },
         "inputs/float-label": {
           title: "浮动标签输入框",
           description: "聚焦或有值时标签平滑上移缩小，表单层次更清晰。",
@@ -642,6 +760,18 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           description: "聚焦时下划线从中心向两端展开，交互反馈明确自然。",
           ogSubtitle: "输入框动画 · 扩展下划线",
           breadcrumb: "聚焦扩展",
+        },
+        "inputs/glow-focus-ring": {
+          title: "发光聚焦边框输入框",
+          description: "聚焦时边框与外发光同步增强，当前输入焦点更醒目。",
+          ogSubtitle: "输入框动画 · 发光边框",
+          breadcrumb: "发光边框",
+        },
+        "inputs/underline-slide": {
+          title: "滑入下划线输入框",
+          description: "聚焦时高亮下划线由左向右滑入，反馈清晰利落。",
+          ogSubtitle: "输入框动画 · 滑入下划线",
+          breadcrumb: "滑入下划线",
         },
       },
     },
