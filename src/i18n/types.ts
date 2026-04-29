@@ -180,6 +180,8 @@ export type ToolsSiteDictionary = {
       loaders: { title: string; description: string; open: string };
       "hover-buttons": { title: string; description: string; open: string };
       text: { title: string; description: string; open: string };
+      cards: { title: string; description: string; open: string };
+      inputs: { title: string; description: string; open: string };
     };
     ui: {
       copy: string;

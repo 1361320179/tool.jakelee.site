@@ -2,6 +2,8 @@ export const ANIMATION_CATEGORIES = [
   "loaders",
   "hover-buttons",
   "text",
+  "cards",
+  "inputs",
 ] as const;
 
 export type AnimationCategory = (typeof ANIMATION_CATEGORIES)[number];

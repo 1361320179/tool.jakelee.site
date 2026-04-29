@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { Geist_Mono, Manrope } from "next/font/google";
-import Script from "next/script";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/site/theme-provider";
 import { LocaleProvider } from "@/components/i18n/locale-context";
@@ -114,9 +113,8 @@ export default async function LangLayout({ children, params }: LayoutProps) {
       suppressHydrationWarning
     >
       <head>
-        <Script
+        <script
           id="theme-init"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: themeInitScript }}
         />
       </head>

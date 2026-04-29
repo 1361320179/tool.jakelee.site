@@ -213,6 +213,18 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
             "Headline treatments: shimmer, typing masks, and playful letter motion.",
           open: "Open collection",
         },
+        cards: {
+          title: "Card hover effects",
+          description:
+            "Elegant card interactions with subtle depth, glow, and gradient accents.",
+          open: "Open collection",
+        },
+        inputs: {
+          title: "Input focus animations",
+          description:
+            "Polished input interactions for focus, labels, and underline feedback.",
+          open: "Open collection",
+        },
       },
       ui: {
         copy: "Copy",
@@ -293,6 +305,34 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
             "Staggered vertical bounce on each character for playful CSS text animation.",
           ogSubtitle: "CSS text animation · bounce",
           breadcrumb: "Bounce letters",
+        },
+        "cards/glass-panel": {
+          title: "Glassmorphism card hover",
+          description:
+            "Frosted-glass card with soft glow and sheen sweep for modern UI surfaces.",
+          ogSubtitle: "Card hover effect · glass panel",
+          breadcrumb: "Glass panel",
+        },
+        "cards/gradient-border": {
+          title: "Animated gradient border card",
+          description:
+            "Premium card style with a rotating gradient border ring and subtle lift.",
+          ogSubtitle: "Card hover effect · gradient border",
+          breadcrumb: "Gradient border",
+        },
+        "inputs/float-label": {
+          title: "Floating label input",
+          description:
+            "Material-inspired input where the label floats and scales on focus or value.",
+          ogSubtitle: "Input animation · floating label",
+          breadcrumb: "Float label",
+        },
+        "inputs/focus-expand": {
+          title: "Expanding focus underline input",
+          description:
+            "Input underline grows from center to edges on focus for clear interaction feedback.",
+          ogSubtitle: "Input animation · focus expand",
+          breadcrumb: "Focus expand",
         },
       },
     },
@@ -496,6 +536,16 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           description: "标题动效：流光渐变、打字遮罩与字母跳动等。",
           open: "进入合集",
         },
+        cards: {
+          title: "卡片悬停动效",
+          description: "强调层次与质感的卡片微交互，适合内容卡和商品卡。",
+          open: "进入合集",
+        },
+        inputs: {
+          title: "输入框聚焦动画",
+          description: "输入框焦点反馈、标签过渡与下划线强化等细节动效。",
+          open: "进入合集",
+        },
       },
       ui: {
         copy: "复制",
@@ -568,6 +618,30 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           description: "逐字错开的上下弹跳，活泼的标题文字动效。",
           ogSubtitle: "CSS 文字动画 · 弹跳",
           breadcrumb: "字母弹跳",
+        },
+        "cards/glass-panel": {
+          title: "玻璃拟态卡片悬停",
+          description: "毛玻璃卡片在悬停时出现柔和光晕与扫光，质感细腻。",
+          ogSubtitle: "卡片悬停动效 · 玻璃面板",
+          breadcrumb: "玻璃面板",
+        },
+        "cards/gradient-border": {
+          title: "渐变流光边框卡片",
+          description: "卡片边框缓慢旋转的渐变流光，适合强调重点内容。",
+          ogSubtitle: "卡片悬停动效 · 渐变边框",
+          breadcrumb: "渐变边框",
+        },
+        "inputs/float-label": {
+          title: "浮动标签输入框",
+          description: "聚焦或有值时标签平滑上移缩小，表单层次更清晰。",
+          ogSubtitle: "输入框动画 · 浮动标签",
+          breadcrumb: "浮动标签",
+        },
+        "inputs/focus-expand": {
+          title: "聚焦扩展下划线输入框",
+          description: "聚焦时下划线从中心向两端展开，交互反馈明确自然。",
+          ogSubtitle: "输入框动画 · 扩展下划线",
+          breadcrumb: "聚焦扩展",
         },
       },
     },
