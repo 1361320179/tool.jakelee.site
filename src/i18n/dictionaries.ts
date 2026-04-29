@@ -225,6 +225,24 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
             "Polished input interactions for focus, labels, and underline feedback.",
           open: "Open collection",
         },
+        "reveal-masks": {
+          title: "Reveal mask animations",
+          description:
+            "Creative wipe and mask reveals for hero headlines and storytelling sections.",
+          open: "Open collection",
+        },
+        "ambient-backgrounds": {
+          title: "Ambient background motion",
+          description:
+            "Subtle atmospheric background loops that add depth without distracting content.",
+          open: "Open collection",
+        },
+        "scroll-cues": {
+          title: "Scroll cue animations",
+          description:
+            "Guide users through long pages with elegant directional and progress cues.",
+          open: "Open collection",
+        },
       },
       ui: {
         copy: "Copy",
@@ -403,6 +421,90 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
             "A bright underline slides in from the left on focus for crisp, minimal form feedback.",
           ogSubtitle: "Input animation · underline slide",
           breadcrumb: "Underline slide",
+        },
+        "reveal-masks/curtain-split": {
+          title: "Curtain split reveal",
+          description:
+            "Twin mask panels slide apart like stage curtains to reveal highlighted content.",
+          ogSubtitle: "Reveal mask animation · curtain split",
+          breadcrumb: "Curtain split",
+        },
+        "reveal-masks/spotlight-reveal": {
+          title: "Spotlight reveal",
+          description:
+            "A moving spotlight gradually exposes text for dramatic but readable hero moments.",
+          ogSubtitle: "Reveal mask animation · spotlight",
+          breadcrumb: "Spotlight reveal",
+        },
+        "reveal-masks/diagonal-wipe": {
+          title: "Diagonal wipe reveal",
+          description:
+            "Angled sweep mask creates a modern editorial transition for section headers.",
+          ogSubtitle: "Reveal mask animation · diagonal wipe",
+          breadcrumb: "Diagonal wipe",
+        },
+        "reveal-masks/noise-fade-in": {
+          title: "Noise fade reveal",
+          description:
+            "Grainy mask dissolves away to reveal content with a cinematic texture.",
+          ogSubtitle: "Reveal mask animation · noise fade",
+          breadcrumb: "Noise fade in",
+        },
+        "ambient-backgrounds/mesh-drift": {
+          title: "Mesh drift background",
+          description:
+            "Gradient mesh blobs drift slowly to add premium depth in hero sections.",
+          ogSubtitle: "Ambient background animation · mesh drift",
+          breadcrumb: "Mesh drift",
+        },
+        "ambient-backgrounds/aurora-wave": {
+          title: "Aurora wave background",
+          description:
+            "Soft aurora ribbons sway across the surface for atmospheric product pages.",
+          ogSubtitle: "Ambient background animation · aurora wave",
+          breadcrumb: "Aurora wave",
+        },
+        "ambient-backgrounds/grain-flow": {
+          title: "Grain flow texture",
+          description:
+            "Low-contrast animated grain adds tactile motion without overpowering UI content.",
+          ogSubtitle: "Ambient background animation · grain flow",
+          breadcrumb: "Grain flow",
+        },
+        "ambient-backgrounds/orbital-glow": {
+          title: "Orbital glow background",
+          description:
+            "Multiple glowing orbs orbit softly to create a futuristic yet calm backdrop.",
+          ogSubtitle: "Ambient background animation · orbital glow",
+          breadcrumb: "Orbital glow",
+        },
+        "scroll-cues/mouse-scroll-loop": {
+          title: "Mouse scroll loop cue",
+          description:
+            "Animated mouse wheel loop clearly hints that users can scroll for more content.",
+          ogSubtitle: "Scroll cue animation · mouse loop",
+          breadcrumb: "Mouse scroll loop",
+        },
+        "scroll-cues/section-progress-rail": {
+          title: "Section progress rail",
+          description:
+            "Stacked progress dots animate in sequence to imply movement through sections.",
+          ogSubtitle: "Scroll cue animation · progress rail",
+          breadcrumb: "Progress rail",
+        },
+        "scroll-cues/sticky-arrow-pulse": {
+          title: "Sticky arrow pulse",
+          description:
+            "A pulsing downward arrow draws attention to the next section without being noisy.",
+          ogSubtitle: "Scroll cue animation · sticky arrow",
+          breadcrumb: "Sticky arrow",
+        },
+        "scroll-cues/peek-next-card": {
+          title: "Peek next card cue",
+          description:
+            "A partially visible next card subtly previews upcoming content blocks.",
+          ogSubtitle: "Scroll cue animation · next card peek",
+          breadcrumb: "Peek next card",
         },
       },
     },
@@ -616,6 +718,21 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           description: "输入框焦点反馈、标签过渡与下划线强化等细节动效。",
           open: "进入合集",
         },
+        "reveal-masks": {
+          title: "遮罩揭示动效",
+          description: "通过擦除、聚光与幕布揭示，让标题和核心内容更有记忆点。",
+          open: "进入合集",
+        },
+        "ambient-backgrounds": {
+          title: "氛围背景动效",
+          description: "低干扰、高质感的背景动态层，适合 Hero 与品牌场景。",
+          open: "进入合集",
+        },
+        "scroll-cues": {
+          title: "滚动引导动效",
+          description: "用轻量视觉提示引导用户继续向下浏览长页面内容。",
+          open: "进入合集",
+        },
       },
       ui: {
         copy: "复制",
@@ -772,6 +889,78 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
           description: "聚焦时高亮下划线由左向右滑入，反馈清晰利落。",
           ogSubtitle: "输入框动画 · 滑入下划线",
           breadcrumb: "滑入下划线",
+        },
+        "reveal-masks/curtain-split": {
+          title: "幕布分离揭示动效",
+          description: "两侧遮罩像幕布一样向外展开，突出主标题或重点信息。",
+          ogSubtitle: "遮罩揭示动画 · 幕布分离",
+          breadcrumb: "幕布分离",
+        },
+        "reveal-masks/spotlight-reveal": {
+          title: "聚光揭示动效",
+          description: "聚光区域横向移动逐步显露文字，视觉戏剧性强且可读。",
+          ogSubtitle: "遮罩揭示动画 · 聚光揭示",
+          breadcrumb: "聚光揭示",
+        },
+        "reveal-masks/diagonal-wipe": {
+          title: "斜向擦除揭示动效",
+          description: "斜切扫光式遮罩掠过内容，适合专题页分段转场。",
+          ogSubtitle: "遮罩揭示动画 · 斜向擦除",
+          breadcrumb: "斜向擦除",
+        },
+        "reveal-masks/noise-fade-in": {
+          title: "颗粒渐隐揭示动效",
+          description: "颗粒遮罩逐渐淡出，形成电影感的内容显现效果。",
+          ogSubtitle: "遮罩揭示动画 · 颗粒渐隐",
+          breadcrumb: "颗粒渐隐",
+        },
+        "ambient-backgrounds/mesh-drift": {
+          title: "渐变网格漂移动效",
+          description: "渐变网格缓慢漂移，适合高级感产品页背景氛围。",
+          ogSubtitle: "氛围背景动画 · 网格漂移",
+          breadcrumb: "网格漂移",
+        },
+        "ambient-backgrounds/aurora-wave": {
+          title: "极光波带背景动效",
+          description: "柔和极光色带横向流动，增强页面空间感与品牌感。",
+          ogSubtitle: "氛围背景动画 · 极光波带",
+          breadcrumb: "极光波带",
+        },
+        "ambient-backgrounds/grain-flow": {
+          title: "颗粒流动纹理动效",
+          description: "低对比颗粒纹理轻微流动，细节丰富但不抢内容注意力。",
+          ogSubtitle: "氛围背景动画 · 颗粒流动",
+          breadcrumb: "颗粒流动",
+        },
+        "ambient-backgrounds/orbital-glow": {
+          title: "轨道光团背景动效",
+          description: "多光团缓慢轨道运动，营造未来感且克制的背景层。",
+          ogSubtitle: "氛围背景动画 · 轨道光团",
+          breadcrumb: "轨道光团",
+        },
+        "scroll-cues/mouse-scroll-loop": {
+          title: "鼠标滚轮循环提示",
+          description: "滚轮动画持续循环，明确提示用户可继续向下浏览。",
+          ogSubtitle: "滚动引导动画 · 鼠标滚轮",
+          breadcrumb: "滚轮提示",
+        },
+        "scroll-cues/section-progress-rail": {
+          title: "分段进度轨道提示",
+          description: "纵向圆点按节奏点亮，传达页面分段与阅读进度感。",
+          ogSubtitle: "滚动引导动画 · 分段轨道",
+          breadcrumb: "分段轨道",
+        },
+        "scroll-cues/sticky-arrow-pulse": {
+          title: "吸附箭头脉冲提示",
+          description: "下箭头轻脉冲并上下浮动，引导用户关注下一屏内容。",
+          ogSubtitle: "滚动引导动画 · 脉冲箭头",
+          breadcrumb: "脉冲箭头",
+        },
+        "scroll-cues/peek-next-card": {
+          title: "下一卡片预窥提示",
+          description: "下方卡片局部露出并轻微上浮，暗示后续内容结构。",
+          ogSubtitle: "滚动引导动画 · 卡片预窥",
+          breadcrumb: "卡片预窥",
         },
       },
     },

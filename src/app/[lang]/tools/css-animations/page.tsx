@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Loader2, MousePointerClick, Type, CreditCard, TextCursorInput } from "lucide-react";
+import {
+  Aperture,
+  Compass,
+  CreditCard,
+  Loader2,
+  MousePointerClick,
+  ScanLine,
+  TextCursorInput,
+  Type,
+} from "lucide-react";
 import { CssAnimationsShell } from "@/components/tools/css-animations/css-animations-shell";
 import { siteConfig } from "@/config/site";
 import { locales } from "@/i18n/config";
@@ -22,6 +31,9 @@ const categoryIcons: Record<AnimationCategory, typeof Loader2> = {
   text: Type,
   cards: CreditCard,
   inputs: TextCursorInput,
+  "reveal-masks": ScanLine,
+  "ambient-backgrounds": Aperture,
+  "scroll-cues": Compass,
 };
 
 type PageProps = {

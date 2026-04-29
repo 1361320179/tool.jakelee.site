@@ -4,6 +4,9 @@ export const ANIMATION_CATEGORIES = [
   "text",
   "cards",
   "inputs",
+  "reveal-masks",
+  "ambient-backgrounds",
+  "scroll-cues",
 ] as const;
 
 export type AnimationCategory = (typeof ANIMATION_CATEGORIES)[number];

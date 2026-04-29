@@ -182,6 +182,9 @@ export type ToolsSiteDictionary = {
       text: { title: string; description: string; open: string };
       cards: { title: string; description: string; open: string };
       inputs: { title: string; description: string; open: string };
+      "reveal-masks": { title: string; description: string; open: string };
+      "ambient-backgrounds": { title: string; description: string; open: string };
+      "scroll-cues": { title: string; description: string; open: string };
     };
     ui: {
       copy: string;

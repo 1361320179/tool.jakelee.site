@@ -1096,10 +1096,434 @@ const inputs: AnimationDefinition[] = [
   },
 ];
 
+const revealMasks: AnimationDefinition[] = [
+  {
+    slug: "curtain-split",
+    category: "reveal-masks",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-curtain-split",
+    getHtml: () =>
+      `<div class="ca-scope ca-curtain-split">\n  <p>Design System Preview</p>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const fs = motionSizePx(vars, 20);
+      const d = motionDurationSec(vars, 1.15);
+      return [
+        `${s("ca-curtain-split")} {`,
+        `  position: relative;`,
+        `  overflow: hidden;`,
+        `  width: min(${motionSizePx(vars, 340)}px, 92vw);`,
+        `  padding: ${Math.round(fs * 1.2)}px ${Math.round(fs * 1.35)}px;`,
+        `  border-radius: ${Math.round(fs * 0.55)}px;`,
+        `  background: color-mix(in srgb, ${vars.color} 10%, #111827);`,
+        `  border: 1px solid color-mix(in srgb, ${vars.color} 35%, transparent);`,
+        `}`,
+        `${s("ca-curtain-split")} p {`,
+        `  margin: 0;`,
+        `  font-size: ${fs}px;`,
+        `  font-weight: 700;`,
+        `  letter-spacing: 0.01em;`,
+        `  color: color-mix(in srgb, ${vars.color} 85%, white);`,
+        `}`,
+        `${s("ca-curtain-split")}::before,`,
+        `${s("ca-curtain-split")}::after {`,
+        `  content: "";`,
+        `  position: absolute;`,
+        `  top: 0;`,
+        `  width: 52%;`,
+        `  height: 100%;`,
+        `  background: linear-gradient(120deg, color-mix(in srgb, ${vars.color} 72%, #0f172a), color-mix(in srgb, ${vars.color} 32%, transparent));`,
+        `  animation: ca-curtain-split-kf ${d} cubic-bezier(0.2, 0.7, 0.1, 1) infinite alternate;`,
+        `}`,
+        `${s("ca-curtain-split")}::before { left: 0; transform-origin: left center; }`,
+        `${s("ca-curtain-split")}::after { right: 0; transform-origin: right center; animation-delay: ${motionDurationSec(vars, 0.08)}; }`,
+        `@keyframes ca-curtain-split-kf {`,
+        `  0%, 16% { transform: translateX(0); }`,
+        `  72%, 100% { transform: translateX(-96%); }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+  {
+    slug: "spotlight-reveal",
+    category: "reveal-masks",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-spotlight-reveal",
+    getHtml: () =>
+      `<div class="ca-scope ca-spotlight-reveal">\n  <p>Spotlight Reveal</p>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const fs = motionSizePx(vars, 21);
+      const d = motionDurationSec(vars, 2.2);
+      return [
+        `${s("ca-spotlight-reveal")} {`,
+        `  position: relative;`,
+        `  overflow: hidden;`,
+        `  width: min(${motionSizePx(vars, 340)}px, 92vw);`,
+        `  padding: ${Math.round(fs * 1.2)}px ${Math.round(fs * 1.35)}px;`,
+        `  border-radius: ${Math.round(fs * 0.6)}px;`,
+        `  background: color-mix(in srgb, ${vars.color} 8%, #0b1020);`,
+        `  border: 1px solid color-mix(in srgb, ${vars.color} 30%, transparent);`,
+        `}`,
+        `${s("ca-spotlight-reveal")} p {`,
+        `  margin: 0;`,
+        `  font-size: ${fs}px;`,
+        `  font-weight: 700;`,
+        `  color: color-mix(in srgb, ${vars.color} 25%, white);`,
+        `  filter: brightness(0.75);`,
+        `}`,
+        `${s("ca-spotlight-reveal")}::after {`,
+        `  content: "";`,
+        `  position: absolute;`,
+        `  inset: -40% auto auto -24%;`,
+        `  width: ${Math.round(fs * 6)}px;`,
+        `  height: ${Math.round(fs * 6)}px;`,
+        `  border-radius: 50%;`,
+        `  background: radial-gradient(circle, color-mix(in srgb, ${vars.color} 75%, white), transparent 65%);`,
+        `  mix-blend-mode: screen;`,
+        `  animation: ca-spotlight-reveal-kf ${d} ease-in-out infinite;`,
+        `}`,
+        `${s("ca-spotlight-reveal")}::before {`,
+        `  content: "";`,
+        `  position: absolute;`,
+        `  inset: 0;`,
+        `  background: radial-gradient(circle at var(--x, 20%) 40%, transparent 0 15%, color-mix(in srgb, black 68%, transparent) 45%);`,
+        `  animation: ca-spotlight-mask-kf ${d} ease-in-out infinite;`,
+        `}`,
+        `@keyframes ca-spotlight-reveal-kf {`,
+        `  0%, 100% { transform: translate(0, 12%); }`,
+        `  50% { transform: translate(330%, 35%); }`,
+        `}`,
+        `@keyframes ca-spotlight-mask-kf {`,
+        `  0%, 100% { --x: 18%; }`,
+        `  50% { --x: 78%; }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+  {
+    slug: "diagonal-wipe",
+    category: "reveal-masks",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-diagonal-wipe",
+    getHtml: () =>
+      `<div class="ca-scope ca-diagonal-wipe">\n  <p>Quarterly Report</p>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const fs = motionSizePx(vars, 20);
+      const d = motionDurationSec(vars, 1.35);
+      return [
+        `${s("ca-diagonal-wipe")} {`,
+        `  position: relative;`,
+        `  overflow: hidden;`,
+        `  width: min(${motionSizePx(vars, 340)}px, 92vw);`,
+        `  padding: ${Math.round(fs * 1.15)}px ${Math.round(fs * 1.35)}px;`,
+        `  border-radius: ${Math.round(fs * 0.55)}px;`,
+        `  border: 1px solid color-mix(in srgb, ${vars.color} 34%, transparent);`,
+        `  background: color-mix(in srgb, ${vars.color} 10%, #0f172a);`,
+        `}`,
+        `${s("ca-diagonal-wipe")} p { margin: 0; font-size: ${fs}px; font-weight: 700; color: color-mix(in srgb, ${vars.color} 86%, white); }`,
+        `${s("ca-diagonal-wipe")}::after {`,
+        `  content: "";`,
+        `  position: absolute;`,
+        `  inset: -80% -20%;`,
+        `  transform: rotate(-16deg) translateX(-96%);`,
+        `  background: linear-gradient(90deg, transparent 20%, color-mix(in srgb, ${vars.color} 62%, #0ea5e9), transparent 80%);`,
+        `  animation: ca-diagonal-wipe-kf ${d} ease-in-out infinite;`,
+        `}`,
+        `@keyframes ca-diagonal-wipe-kf {`,
+        `  0%, 22% { transform: rotate(-16deg) translateX(-96%); opacity: 0.85; }`,
+        `  70%, 100% { transform: rotate(-16deg) translateX(96%); opacity: 0; }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+  {
+    slug: "noise-fade-in",
+    category: "reveal-masks",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-noise-fade",
+    getHtml: () =>
+      `<div class="ca-scope ca-noise-fade">\n  <p>Noise Fade Reveal</p>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const fs = motionSizePx(vars, 20);
+      const d = motionDurationSec(vars, 1.8);
+      return [
+        `${s("ca-noise-fade")} {`,
+        `  position: relative;`,
+        `  overflow: hidden;`,
+        `  width: min(${motionSizePx(vars, 340)}px, 92vw);`,
+        `  padding: ${Math.round(fs * 1.2)}px ${Math.round(fs * 1.35)}px;`,
+        `  border-radius: ${Math.round(fs * 0.55)}px;`,
+        `  border: 1px solid color-mix(in srgb, ${vars.color} 30%, transparent);`,
+        `  background: color-mix(in srgb, ${vars.color} 10%, #0b1222);`,
+        `}`,
+        `${s("ca-noise-fade")} p { margin: 0; font-size: ${fs}px; font-weight: 700; color: color-mix(in srgb, ${vars.color} 84%, white); }`,
+        `${s("ca-noise-fade")}::before {`,
+        `  content: "";`,
+        `  position: absolute;`,
+        `  inset: 0;`,
+        `  background-image: radial-gradient(color-mix(in srgb, ${vars.color} 65%, white) 0.8px, transparent 0.8px);`,
+        `  background-size: 4px 4px;`,
+        `  opacity: 0.6;`,
+        `  animation: ca-noise-fade-kf ${d} ease-in-out infinite alternate;`,
+        `}`,
+        `@keyframes ca-noise-fade-kf {`,
+        `  0% { opacity: 0.62; filter: blur(0); }`,
+        `  100% { opacity: 0; filter: blur(2px); }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+];
+
+const ambientBackgrounds: AnimationDefinition[] = [
+  {
+    slug: "mesh-drift",
+    category: "ambient-backgrounds",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-mesh-drift",
+    getHtml: () =>
+      `<div class="ca-scope ca-mesh-drift">\n  <p>Mesh Drift Background</p>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const h = motionSizePx(vars, 170);
+      const d = motionDurationSec(vars, 9);
+      return [
+        `${s("ca-mesh-drift")} {`,
+        `  position: relative;`,
+        `  overflow: hidden;`,
+        `  width: min(${motionSizePx(vars, 360)}px, 94vw);`,
+        `  height: ${h}px;`,
+        `  border-radius: ${Math.round(h * 0.14)}px;`,
+        `  border: 1px solid color-mix(in srgb, ${vars.color} 30%, transparent);`,
+        `  background: radial-gradient(circle at 20% 20%, color-mix(in srgb, ${vars.color} 38%, #22d3ee), transparent 42%), radial-gradient(circle at 80% 70%, color-mix(in srgb, ${vars.color} 34%, #a855f7), transparent 45%), #0b1220;`,
+        `  animation: ca-mesh-drift-kf ${d} ease-in-out infinite alternate;`,
+        `}`,
+        `${s("ca-mesh-drift")} p { position: absolute; left: 16px; bottom: 14px; margin: 0; font-size: ${Math.max(14, Math.round(h * 0.11))}px; color: color-mix(in srgb, ${vars.color} 82%, white); font-weight: 600; }`,
+        `@keyframes ca-mesh-drift-kf {`,
+        `  0% { background-position: 0% 0%, 0% 0%, 0 0; }`,
+        `  100% { background-position: 12% 8%, -10% -12%, 0 0; }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+  {
+    slug: "aurora-wave",
+    category: "ambient-backgrounds",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-aurora-wave",
+    getHtml: () =>
+      `<div class="ca-scope ca-aurora-wave">\n  <p>Aurora Wave</p>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const h = motionSizePx(vars, 170);
+      const d = motionDurationSec(vars, 7.6);
+      return [
+        `${s("ca-aurora-wave")} {`,
+        `  position: relative;`,
+        `  overflow: hidden;`,
+        `  width: min(${motionSizePx(vars, 360)}px, 94vw);`,
+        `  height: ${h}px;`,
+        `  border-radius: ${Math.round(h * 0.14)}px;`,
+        `  border: 1px solid color-mix(in srgb, ${vars.color} 28%, transparent);`,
+        `  background: #091022;`,
+        `}`,
+        `${s("ca-aurora-wave")}::before {`,
+        `  content: "";`,
+        `  position: absolute;`,
+        `  inset: -20% -30%;`,
+        `  background: linear-gradient(115deg, color-mix(in srgb, ${vars.color} 30%, #22d3ee), color-mix(in srgb, ${vars.color} 34%, #a855f7), color-mix(in srgb, ${vars.color} 28%, #34d399));`,
+        `  filter: blur(${Math.round(h * 0.16)}px);`,
+        `  opacity: 0.58;`,
+        `  animation: ca-aurora-wave-kf ${d} ease-in-out infinite alternate;`,
+        `}`,
+        `${s("ca-aurora-wave")} p { position: absolute; left: 16px; bottom: 14px; margin: 0; font-size: ${Math.max(14, Math.round(h * 0.11))}px; color: color-mix(in srgb, ${vars.color} 84%, white); font-weight: 600; }`,
+        `@keyframes ca-aurora-wave-kf {`,
+        `  0% { transform: rotate(-4deg) translateX(-8%); }`,
+        `  100% { transform: rotate(4deg) translateX(8%); }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+  {
+    slug: "grain-flow",
+    category: "ambient-backgrounds",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-grain-flow",
+    getHtml: () =>
+      `<div class="ca-scope ca-grain-flow">\n  <p>Grain Flow</p>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const h = motionSizePx(vars, 170);
+      const d = motionDurationSec(vars, 5.8);
+      return [
+        `${s("ca-grain-flow")} {`,
+        `  position: relative;`,
+        `  overflow: hidden;`,
+        `  width: min(${motionSizePx(vars, 360)}px, 94vw);`,
+        `  height: ${h}px;`,
+        `  border-radius: ${Math.round(h * 0.14)}px;`,
+        `  border: 1px solid color-mix(in srgb, ${vars.color} 26%, transparent);`,
+        `  background: linear-gradient(150deg, color-mix(in srgb, ${vars.color} 16%, #111827), #0b1220 65%);`,
+        `}`,
+        `${s("ca-grain-flow")}::before {`,
+        `  content: "";`,
+        `  position: absolute;`,
+        `  inset: -40%;`,
+        `  background-image: radial-gradient(color-mix(in srgb, ${vars.color} 44%, white) 0.8px, transparent 0.8px);`,
+        `  background-size: 5px 5px;`,
+        `  opacity: 0.23;`,
+        `  animation: ca-grain-flow-kf ${d} linear infinite;`,
+        `}`,
+        `${s("ca-grain-flow")} p { position: absolute; left: 16px; bottom: 14px; margin: 0; font-size: ${Math.max(14, Math.round(h * 0.11))}px; color: color-mix(in srgb, ${vars.color} 84%, white); font-weight: 600; }`,
+        `@keyframes ca-grain-flow-kf {`,
+        `  0% { transform: translate(0, 0); }`,
+        `  100% { transform: translate(-10%, -8%); }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+  {
+    slug: "orbital-glow",
+    category: "ambient-backgrounds",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-orbital-glow",
+    getHtml: () =>
+      `<div class="ca-scope ca-orbital-glow">\n  <p>Orbital Glow</p>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const h = motionSizePx(vars, 170);
+      const d = motionDurationSec(vars, 8.4);
+      return [
+        `${s("ca-orbital-glow")} {`,
+        `  position: relative;`,
+        `  overflow: hidden;`,
+        `  width: min(${motionSizePx(vars, 360)}px, 94vw);`,
+        `  height: ${h}px;`,
+        `  border-radius: ${Math.round(h * 0.14)}px;`,
+        `  border: 1px solid color-mix(in srgb, ${vars.color} 28%, transparent);`,
+        `  background: #0a1020;`,
+        `}`,
+        `${s("ca-orbital-glow")}::before,`,
+        `${s("ca-orbital-glow")}::after {`,
+        `  content: "";`,
+        `  position: absolute;`,
+        `  width: ${Math.round(h * 0.72)}px;`,
+        `  height: ${Math.round(h * 0.72)}px;`,
+        `  border-radius: 50%;`,
+        `  background: radial-gradient(circle, color-mix(in srgb, ${vars.color} 56%, white), transparent 66%);`,
+        `  filter: blur(${Math.round(h * 0.08)}px);`,
+        `  opacity: 0.72;`,
+        `}`,
+        `${s("ca-orbital-glow")}::before { animation: ca-orbital-glow-a ${d} ease-in-out infinite; }`,
+        `${s("ca-orbital-glow")}::after { animation: ca-orbital-glow-b ${d} ease-in-out infinite; }`,
+        `${s("ca-orbital-glow")} p { position: absolute; left: 16px; bottom: 14px; margin: 0; font-size: ${Math.max(14, Math.round(h * 0.11))}px; color: color-mix(in srgb, ${vars.color} 84%, white); font-weight: 600; }`,
+        `@keyframes ca-orbital-glow-a {`,
+        `  0% { transform: translate(-25%, -25%); }`,
+        `  50% { transform: translate(180%, 30%); }`,
+        `  100% { transform: translate(20%, 130%); }`,
+        `}`,
+        `@keyframes ca-orbital-glow-b {`,
+        `  0% { transform: translate(170%, 110%); }`,
+        `  50% { transform: translate(-10%, 20%); }`,
+        `  100% { transform: translate(120%, -25%); }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+];
+
+const scrollCues: AnimationDefinition[] = [
+  {
+    slug: "mouse-scroll-loop",
+    category: "scroll-cues",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-mouse-scroll",
+    getHtml: () =>
+      `<div class="ca-scope ca-mouse-scroll">\n  <span class="ca-mouse-scroll__mouse"><span class="ca-mouse-scroll__wheel"></span></span>\n  <p>Scroll to explore</p>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const d = motionDurationSec(vars, 1.5);
+      const h = motionSizePx(vars, 50);
+      const w = Math.round(h * 0.62);
+      return [
+        `${s("ca-mouse-scroll")} { display: inline-flex; flex-direction: column; align-items: center; gap: 10px; }`,
+        `${s("ca-mouse-scroll")} .ca-mouse-scroll__mouse { width: ${w}px; height: ${h}px; border-radius: 999px; border: 2px solid color-mix(in srgb, ${vars.color} 72%, transparent); display: grid; place-items: start center; padding-top: ${Math.round(h * 0.16)}px; }`,
+        `${s("ca-mouse-scroll")} .ca-mouse-scroll__wheel { width: ${Math.max(4, Math.round(w * 0.18))}px; height: ${Math.max(8, Math.round(h * 0.24))}px; border-radius: 99px; background: ${vars.color}; animation: ca-mouse-scroll-kf ${d} ease-in-out infinite; }`,
+        `${s("ca-mouse-scroll")} p { margin: 0; font-size: ${Math.max(12, Math.round(h * 0.28))}px; color: color-mix(in srgb, ${vars.color} 80%, white); }`,
+        `@keyframes ca-mouse-scroll-kf {`,
+        `  0% { transform: translateY(0); opacity: 0.95; }`,
+        `  70% { transform: translateY(${Math.round(h * 0.36)}px); opacity: 0; }`,
+        `  100% { transform: translateY(0); opacity: 0; }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+  {
+    slug: "section-progress-rail",
+    category: "scroll-cues",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-progress-rail",
+    getHtml: () =>
+      `<div class="ca-scope ca-progress-rail">\n  <span></span><span></span><span></span><span></span>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const d = motionDurationSec(vars, 1.6);
+      const dot = motionSizePx(vars, 12);
+      return [
+        `${s("ca-progress-rail")} { display: inline-flex; flex-direction: column; gap: ${Math.max(6, Math.round(dot * 0.4))}px; }`,
+        `${s("ca-progress-rail")} span { width: ${dot}px; height: ${dot}px; border-radius: 50%; background: color-mix(in srgb, ${vars.color} 26%, transparent); animation: ca-progress-rail-kf ${d} ease-in-out infinite; }`,
+        `${s("ca-progress-rail")} span:nth-child(2) { animation-delay: 0.14s; }`,
+        `${s("ca-progress-rail")} span:nth-child(3) { animation-delay: 0.28s; }`,
+        `${s("ca-progress-rail")} span:nth-child(4) { animation-delay: 0.42s; }`,
+        `@keyframes ca-progress-rail-kf {`,
+        `  0%, 100% { transform: scale(0.88); background: color-mix(in srgb, ${vars.color} 24%, transparent); }`,
+        `  45% { transform: scale(1.08); background: ${vars.color}; }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+  {
+    slug: "sticky-arrow-pulse",
+    category: "scroll-cues",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-sticky-arrow",
+    getHtml: () =>
+      `<div class="ca-scope ca-sticky-arrow">\n  <span>↓</span>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const box = motionSizePx(vars, 46);
+      const d = motionDurationSec(vars, 1.25);
+      return [
+        `${s("ca-sticky-arrow")} { width: ${box}px; height: ${box}px; border-radius: 50%; border: 1px solid color-mix(in srgb, ${vars.color} 38%, transparent); background: color-mix(in srgb, ${vars.color} 12%, transparent); display: inline-grid; place-items: center; box-shadow: 0 0 0 0 color-mix(in srgb, ${vars.color} 0%, transparent); animation: ca-sticky-arrow-ring ${d} ease-in-out infinite; }`,
+        `${s("ca-sticky-arrow")} span { color: color-mix(in srgb, ${vars.color} 88%, white); font-size: ${Math.max(18, Math.round(box * 0.45))}px; animation: ca-sticky-arrow-bob ${d} ease-in-out infinite; }`,
+        `@keyframes ca-sticky-arrow-bob { 0%, 100% { transform: translateY(-1px); } 50% { transform: translateY(4px); } }`,
+        `@keyframes ca-sticky-arrow-ring { 0%,100% { box-shadow: 0 0 0 0 color-mix(in srgb, ${vars.color} 0%, transparent); } 50% { box-shadow: 0 0 0 7px color-mix(in srgb, ${vars.color} 22%, transparent); } }`,
+      ].join("\n");
+    },
+  },
+  {
+    slug: "peek-next-card",
+    category: "scroll-cues",
+    supportedParams: ["speed", "color", "size"],
+    rootClass: "ca-peek-next",
+    getHtml: () =>
+      `<div class="ca-scope ca-peek-next">\n  <article>Current section</article>\n  <article class="ca-peek-next__next">Next section</article>\n</div>`,
+    getCss: (vars: MotionVars) => {
+      const d = motionDurationSec(vars, 1.9);
+      const fs = motionSizePx(vars, 14);
+      const w = motionSizePx(vars, 280);
+      return [
+        `${s("ca-peek-next")} { position: relative; width: min(${w}px, 90vw); height: ${Math.round(fs * 8)}px; }`,
+        `${s("ca-peek-next")} article { position: absolute; inset: 0; margin: 0; border-radius: ${Math.round(fs * 0.7)}px; border: 1px solid color-mix(in srgb, ${vars.color} 34%, transparent); background: color-mix(in srgb, ${vars.color} 10%, #0f172a); color: color-mix(in srgb, ${vars.color} 82%, white); display: grid; place-items: center; font-size: ${fs}px; font-weight: 600; }`,
+        `${s("ca-peek-next")} .ca-peek-next__next { transform: translateY(82%); opacity: 0.7; animation: ca-peek-next-kf ${d} ease-in-out infinite; }`,
+        `@keyframes ca-peek-next-kf {`,
+        `  0%, 100% { transform: translateY(82%); opacity: 0.72; }`,
+        `  50% { transform: translateY(62%); opacity: 1; }`,
+        `}`,
+      ].join("\n");
+    },
+  },
+];
+
 export const animations: AnimationDefinition[] = [
   ...loaders,
   ...hoverButtons,
   ...textAnimations,
   ...cards,
   ...inputs,
+  ...revealMasks,
+  ...ambientBackgrounds,
+  ...scrollCues,
 ];
