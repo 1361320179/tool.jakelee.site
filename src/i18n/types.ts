@@ -84,6 +84,36 @@ export type ToolsSiteDictionary = {
       ogSubtitle: string;
       tags: string[];
     };
+    "qrcode-generator": {
+      name: string;
+      description: string;
+      ogSubtitle: string;
+      tags: string[];
+    };
+    "color-converter": {
+      name: string;
+      description: string;
+      ogSubtitle: string;
+      tags: string[];
+    };
+    "text-counter": {
+      name: string;
+      description: string;
+      ogSubtitle: string;
+      tags: string[];
+    };
+    "unit-converter": {
+      name: string;
+      description: string;
+      ogSubtitle: string;
+      tags: string[];
+    };
+    "case-converter": {
+      name: string;
+      description: string;
+      ogSubtitle: string;
+      tags: string[];
+    };
   };
   toolUi: {
     base64: {
@@ -159,6 +189,66 @@ export type ToolsSiteDictionary = {
       noticeZipNoImages: string;
       disclaimerGif: string;
       disclaimerSvg: string;
+    };
+    "qrcode-generator": {
+      cardTitle: string;
+      labelInput: string;
+      placeholderInput: string;
+      generate: string;
+      download: string;
+      clear: string;
+      emptyPreview: string;
+      generatedFrom: string;
+      errEmpty: string;
+    };
+    "color-converter": {
+      cardTitle: string;
+      labelColor: string;
+      labelHex: string;
+      labelRgb: string;
+      labelHsl: string;
+      copy: string;
+      copyHintOk: string;
+      copyHintFail: string;
+    };
+    "text-counter": {
+      cardTitle: string;
+      labelInput: string;
+      placeholderInput: string;
+      statChars: string;
+      statCharsNoSpaces: string;
+      statWords: string;
+      statLines: string;
+      statReadingTime: string;
+      clear: string;
+    };
+    "unit-converter": {
+      cardTitle: string;
+      labelCategory: string;
+      labelFrom: string;
+      labelTo: string;
+      swap: string;
+      categories: {
+        length: string;
+        weight: string;
+        temperature: string;
+        area: string;
+      };
+      units: Record<string, string>;
+    };
+    "case-converter": {
+      cardTitle: string;
+      labelInput: string;
+      placeholderInput: string;
+      btnUpper: string;
+      btnLower: string;
+      btnTitle: string;
+      btnSentence: string;
+      btnCamel: string;
+      copy: string;
+      clear: string;
+      copyHintOk: string;
+      copyHintFail: string;
     };
   };
   metadata: {

@@ -30,11 +30,41 @@ const ImageConverterPanel = dynamic(
   { loading: () => panelLoading },
 );
 
+const QrCodeGeneratorPanel = dynamic(
+  () => import("@/lib/tools/qrcode-generator/tool-panel"),
+  { loading: () => panelLoading },
+);
+
+const ColorConverterPanel = dynamic(
+  () => import("@/lib/tools/color-converter/tool-panel"),
+  { loading: () => panelLoading },
+);
+
+const TextCounterPanel = dynamic(
+  () => import("@/lib/tools/text-counter/tool-panel"),
+  { loading: () => panelLoading },
+);
+
+const UnitConverterPanel = dynamic(
+  () => import("@/lib/tools/unit-converter/tool-panel"),
+  { loading: () => panelLoading },
+);
+
+const CaseConverterPanel = dynamic(
+  () => import("@/lib/tools/case-converter/tool-panel"),
+  { loading: () => panelLoading },
+);
+
 const panels = {
   base64: Base64Panel,
   uuid: UuidPanel,
   "json-formatter": JsonFormatterPanel,
   "image-converter": ImageConverterPanel,
+  "qrcode-generator": QrCodeGeneratorPanel,
+  "color-converter": ColorConverterPanel,
+  "text-counter": TextCounterPanel,
+  "unit-converter": UnitConverterPanel,
+  "case-converter": CaseConverterPanel,
 } as const;
 
 type ToolSlug = keyof typeof panels;

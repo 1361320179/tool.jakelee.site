@@ -1,4 +1,15 @@
-import { Binary, Braces, Fingerprint, Images, Palette } from "lucide-react";
+import {
+  Binary,
+  Braces,
+  Fingerprint,
+  Images,
+  Palette,
+  QrCode,
+  Pipette,
+  Type,
+  Scale,
+  CaseSensitive,
+} from "lucide-react";
 import type { ToolsSiteDictionary } from "@/i18n/types";
 import type { ToolDefinition } from "./types";
 
@@ -8,6 +19,11 @@ const staticTools = [
   { slug: "json-formatter" as const, icon: Braces },
   { slug: "image-converter" as const, icon: Images },
   { slug: "css-animations" as const, icon: Palette },
+  { slug: "qrcode-generator" as const, icon: QrCode },
+  { slug: "color-converter" as const, icon: Pipette },
+  { slug: "text-counter" as const, icon: Type },
+  { slug: "unit-converter" as const, icon: Scale },
+  { slug: "case-converter" as const, icon: CaseSensitive },
 ] as const;
 
 export type ToolSlug = (typeof staticTools)[number]["slug"];
