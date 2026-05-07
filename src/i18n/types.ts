@@ -18,6 +18,11 @@ export type ToolsSiteDictionary = {
     eyebrow: string;
     heroBody: string;
     allTools: string;
+    toolSearch: {
+      label: string;
+      placeholder: string;
+      noResults: string;
+    };
     cssAnimationsCta: {
       title: string;
       body: string;

@@ -26,6 +26,11 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
       heroBody:
         "All tools run in your browser — nothing is uploaded, so your data stays on your device.",
       allTools: "All tools",
+      toolSearch: {
+        label: "Search tools",
+        placeholder: "Search by title, tag, or description",
+        noResults: "No tools match your search.",
+      },
       cssAnimationsCta: {
         title: "CSS animation snippets",
         body:
@@ -647,6 +652,11 @@ const dictionaries: Record<SiteLocale, ToolsSiteDictionary> = {
       heroBody:
         "所有工具都在浏览器本地完成处理，不上传您的任何内容，保障您的隐私安全。",
       allTools: "全部工具",
+      toolSearch: {
+        label: "搜索工具",
+        placeholder: "按标题、标签或描述搜索",
+        noResults: "没有匹配的工具。",
+      },
       cssAnimationsCta: {
         title: "CSS 动画片段合集",
         body: "加载动画、按钮悬停与文字动效——可预览、调参并复制 HTML/CSS。",
